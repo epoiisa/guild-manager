@@ -1,0 +1,8 @@
+- title: Home
+  url: /
+- title: Source
+  url: https://github.com/epoiisa/guild-manager
+  external: true
+- title: Releases
+  url: https://github.com/epoiisa/guild-manager/releases
+  external: true

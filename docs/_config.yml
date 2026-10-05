@@ -1,0 +1,18 @@
+title: Guild Manager
+description: Guild Manager documentation.
+url: "https://epoiisa.github.io"
+baseurl: "/guild-manager"
+remote_theme: epoiisa/unfettered@main
+plugins:
+  - jekyll-remote-theme
+markdown: kramdown
+kramdown:
+  input: GFM
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+exclude:
+  - README.md
