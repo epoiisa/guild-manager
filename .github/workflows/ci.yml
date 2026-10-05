@@ -1,0 +1,62 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run typecheck
+      - run: npm run build
+
+  database:
+    name: PostgreSQL 18 verification
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    services:
+      postgres:
+        image: postgres:18
+        env:
+          POSTGRES_DB: guild_manager_ci
+          POSTGRES_USER: guild_manager_ci
+          POSTGRES_PASSWORD: guild_manager_ci
+        options: >-
+          --health-cmd "pg_isready -U guild_manager_ci -d guild_manager_ci"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+        ports:
+          - 5432:5432
+    env:
+      DATABASE_URL: postgresql://guild_manager_ci:guild_manager_ci@127.0.0.1:5432/guild_manager_ci
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Run PostgreSQL schema and repository smoke
+        run: npm run db:smoke
+      - name: Run PostgreSQL runtime-lock smoke
+        run: npm run runtime-lock:smoke
+      - name: Show PostgreSQL service logs on failure
+        if: failure()
+        run: docker logs "${{ job.services.postgres.id }}"
