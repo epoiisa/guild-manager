@@ -30,7 +30,7 @@ See [Discord's gateway documentation](https://docs.discord.com/developers/events
 Clone the public source repository and select the release tag:
 
 ```sh
-git clone https://github.com/epoiisa/guild-manager-public.git guild-manager
+git clone https://github.com/epoiisa/guild-manager.git guild-manager
 cd guild-manager
 git checkout v0.1.0-alpha.1
 npm ci
@@ -52,7 +52,7 @@ Startup acquires a PostgreSQL runtime lock, applies schema migrations and regist
 
 ## Download a pre-built release
 
-Download `guild-manager-0.1.0-alpha.1-runtime.tar.gz` and `SHA256SUMS` from the [matching GitHub prerelease](https://github.com/epoiisa/guild-manager-public/releases/tag/v0.1.0-alpha.1). Verify its SHA-256 checksum before extracting. On macOS use `shasum -a 256`; on Linux use `sha256sum`; on Windows use PowerShell `Get-FileHash -Algorithm SHA256`.
+Download `guild-manager-0.1.0-alpha.1-runtime.tar.gz` and `SHA256SUMS` from the [matching GitHub prerelease](https://github.com/epoiisa/guild-manager/releases/tag/v0.1.0-alpha.1). Verify its SHA-256 checksum before extracting. On macOS use `shasum -a 256`; on Linux use `sha256sum`; on Windows use PowerShell `Get-FileHash -Algorithm SHA256`.
 
 Extract the archive, enter its directory, and run:
 
