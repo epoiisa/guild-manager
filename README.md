@@ -1,8 +1,12 @@
 # Guild Manager
 
-A self-hosted Discord bot for Albion Online guilds and communities. It supports character registration, membership and roles, applications and tickets, party signups, giveaways, character accounts, re-gears and weapon specialisations.
+Guild Manager is a self-hosted Discord bot for Albion Online guilds and communities. It manages character registration and membership, automates Discord roles, handles applications and private tickets, organises parties and giveaways, and tracks character balances, re-gears and weapon specialisations.
 
-This repository contains periodic source releases. The current version is **0.1.0-alpha.1**, an alpha prerelease. Commands and database schemas may change between releases. Public access to the maintainer's hosted instance is not currently offered. Self-hosting is free; a future paid hosted service would be a separate offering.
+This repository contains the source code, with periodic ready-to-run releases. The current version is **0.1.0-alpha.1**, an alpha prerelease. Commands and database schemas may change between releases. Public access to the maintainer's hosted instance is not currently offered. Self-hosting is free; a future paid hosted service would be a separate offering.
+
+## Documentation
+
+The [Guild Manager documentation](https://epoiisa.github.io/guild-manager/) includes getting started guides, feature guides, the complete command reference, and self-hosting instructions.
 
 ## AI development disclosure
 
