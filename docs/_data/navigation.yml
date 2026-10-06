@@ -1,5 +1,13 @@
 - title: Home
   url: /
+- title: Getting Started
+  url: /getting-started/
+- title: Guides
+  url: /guides/
+- title: Command Reference
+  url: /reference/
+- title: Self-Hosting
+  url: /self-hosting/
 - title: Source
   url: https://github.com/epoiisa/guild-manager
   external: true
