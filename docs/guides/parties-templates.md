@@ -27,6 +27,8 @@ The host's thread card offers **Start**, **End**, **Edit**, and **Cancel** as ap
 
 Scheduled parties retain their scheduled start and cleanup six hours after that scheduled time. Unscheduled parties start manually and expire twelve hours after publication or six hours after their first manual start. Where offered, **Unstart** returns early-started content to waiting; it preserves signups and cleanup deadlines.
 
+Automatic cleanup recovery for already archived threads is available in Production. It is also upcoming for public source releases and absent from the published **0.1.0-alpha.1** source and downloads. The correction temporarily reopens the expired thread with its lock applied, refreshes its closed-state messages, and archives it again while retaining its history.
+
 ## Send another ping {#send-another-ping-upcoming}
 
 Manual Ping is available in Production. It remains upcoming for public source releases and is not included in the currently published **0.1.0-alpha.1** source or downloads.
