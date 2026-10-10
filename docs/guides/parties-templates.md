@@ -27,9 +27,9 @@ The host's thread card offers **Start**, **End**, **Edit**, and **Cancel** as ap
 
 Scheduled parties retain their scheduled start and cleanup six hours after that scheduled time. Unscheduled parties start manually and expire twelve hours after publication or six hours after their first manual start. Where offered, **Unstart** returns early-started content to waiting; it preserves signups and cleanup deadlines.
 
-## Send another ping (upcoming)
+## Send another ping {#send-another-ping-upcoming}
 
-Manual Ping is an upcoming feature and is not included in the currently published **0.1.0-alpha.1** source or downloads.
+Manual Ping is available in Production. It remains upcoming for public source releases and is not included in the currently published **0.1.0-alpha.1** source or downloads.
 
 After content starts, the current host can click **Ping** on its details card or use `/party ping` in the party thread, with no command inputs. The active host-control row is **End**, **Ping**, **Edit**, **Cancel**. Ping is available only while the party is started, open, and unexpired.
 

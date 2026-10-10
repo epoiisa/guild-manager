@@ -7,7 +7,7 @@ permalink: /reference/parties-templates/
 
 Public release **0.1.0-alpha.1**. [Command index]({{ "/reference/" | relative_url }}).
 
-The manual Ping entry below is an upcoming feature, not included in this published release's source or downloads.
+The manual Ping entry below is available in Production. It remains upcoming for public source releases and is not included in this published release's source or downloads.
 
 Content templates define signup layouts; parties use a selected template to create a content thread and signup controls in the configured content channel.
 
@@ -32,7 +32,7 @@ See the UTC input rules in the [command index]({{ '/reference/' | relative_url }
 - [`/party list`](#party-list)
 - [`/party edit`](#party-edit)
 - [`/party start`](#party-start)
-- [`/party ping`](#party-ping) (upcoming)
+- [`/party ping`](#party-ping) (Production; upcoming in public source releases)
 - [`/party end`](#party-end)
 - [`/party cancel`](#party-cancel)
 - [`/party archive`](#party-archive)
@@ -137,7 +137,7 @@ This command has no slash-command inputs.
 
 ### /party ping
 
-**Upcoming:** not included in the published **0.1.0-alpha.1** source or downloads.
+**Available in Production; upcoming in public source releases.** Not included in the published **0.1.0-alpha.1** source or downloads.
 
 ```text
 /party ping
