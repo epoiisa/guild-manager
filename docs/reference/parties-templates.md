@@ -7,6 +7,8 @@ permalink: /reference/parties-templates/
 
 Public release **0.1.0-alpha.1**. [Command index]({{ "/reference/" | relative_url }}).
 
+The manual Ping entry below is an upcoming feature, not included in this published release's source or downloads.
+
 Content templates define signup layouts; parties use a selected template to create a content thread and signup controls in the configured content channel.
 
 ## Access and outcomes
@@ -30,6 +32,7 @@ See the UTC input rules in the [command index]({{ '/reference/' | relative_url }
 - [`/party list`](#party-list)
 - [`/party edit`](#party-edit)
 - [`/party start`](#party-start)
+- [`/party ping`](#party-ping) (upcoming)
 - [`/party end`](#party-end)
 - [`/party cancel`](#party-cancel)
 - [`/party archive`](#party-archive)
@@ -131,6 +134,24 @@ Edit the current content signup party.
 Start the current content signup party.
 
 This command has no slash-command inputs.
+
+### /party ping
+
+**Upcoming:** not included in the published **0.1.0-alpha.1** source or downloads.
+
+```text
+/party ping
+```
+
+Resend the started party's signup notification. This command has no slash-command inputs.
+
+Only the current host may use it, inside the party's managed thread, while the party is started, open, and unexpired. The **Ping** button on the canonical details message performs the same action. Active details controls appear in this order: **End**, **Ping**, **Edit**, **Cancel**. Waiting, ended, cancelled, archived, and expired parties cannot be pinged.
+
+The new notification shows the latest confirmed named-role and Standby roster, the current party title, the saved actual start time and starting-host attribution, Details and Signups links, and pinned-signup guidance. Pending-only requests are excluded. At most the first 100 distinct confirmed users in signup order are notified. Larger rosters retain every signup in the complete attached report; users after the first 100 are not pinged.
+
+Guild Manager identifies earlier bot-authored start and Ping notifications in the same thread, sends the new notification, saves it as the current start notification, then deletes all identified earlier notifications, including the original automatic or manual start message. The latest notification owns **Unstart** when eligible: unscheduled parties, or scheduled parties whose scheduled time is still in the future. Older Unstart controls cannot act after replacement. Ping does not change the actual start time, cleanup deadline, signups, or approval requests.
+
+Earlier notifications remain if preparation, sending, or saving the new message cannot be confirmed. An uncertain-delivery warning asks the host to check the thread before trying again. If the party changes before the replacement is saved, the host is told to use its current controls. If the new notification is saved but some earlier messages cannot be deleted, a cleanup warning explains that the next manual ping retries their removal. Each invocation attempts at most one send; there is no automatic resend.
 
 ### /party end
 

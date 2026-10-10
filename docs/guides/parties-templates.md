@@ -27,6 +27,18 @@ The host's thread card offers **Start**, **End**, **Edit**, and **Cancel** as ap
 
 Scheduled parties retain their scheduled start and cleanup six hours after that scheduled time. Unscheduled parties start manually and expire twelve hours after publication or six hours after their first manual start. Where offered, **Unstart** returns early-started content to waiting; it preserves signups and cleanup deadlines.
 
+## Send another ping (upcoming)
+
+Manual Ping is an upcoming feature and is not included in the currently published **0.1.0-alpha.1** source or downloads.
+
+After content starts, the current host can click **Ping** on its details card or use `/party ping` in the party thread, with no command inputs. The active host-control row is **End**, **Ping**, **Edit**, **Cancel**. Ping is available only while the party is started, open, and unexpired.
+
+The fresh start notification uses the latest confirmed roles and Standby signups, including people who joined after the start. It preserves the actual start time, starting-host attribution, and Details and Signups links. Pending-only requests are excluded. At most the first 100 distinct confirmed users are notified; large rosters retain everyone in an attached report.
+
+Once the new notification is sent and saved, Guild Manager deletes earlier start and Ping notifications in that thread, including the original automatic or manual start message. The latest notification offers **Unstart** when eligible. Ping leaves the party's start time and cleanup deadline unchanged.
+
+If preparation, sending, or saving the new message cannot be confirmed, earlier notifications remain; check the thread before trying again. A warning after a successful ping means some earlier messages could not be removed. The next manual ping retries their removal. Guild Manager does not automatically resend a ping.
+
 ## Reuse a template
 
 Create a template with `/template create`, or use `/template capture` inside a content thread. Inspect and maintain it with `/template list`, `show`, `edit`, and `remove`. Approval and Multi-signup are party choices and are not saved in templates.

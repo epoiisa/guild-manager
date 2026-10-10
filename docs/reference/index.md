@@ -7,6 +7,8 @@ permalink: /reference/
 
 This reference describes **0.1.0-alpha.1**, the public source release. Commands available on another running version may differ.
 
+Upcoming features are explicitly marked in their topic pages and are excluded from the released command counts below.
+
 Each topic lists exact registered command signatures, input names, accepted choices, required and optional options, and operational rules. Guides explain complete workflows; use this reference when choosing a command or checking an input.
 
 ## Topics
