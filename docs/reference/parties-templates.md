@@ -31,8 +31,8 @@ See the UTC input rules in the [command index]({{ '/reference/' | relative_url }
 - [`/leave`](#leave)
 - [`/party host scheduled`](#party-host-scheduled)
 - [`/party host unscheduled`](#party-host-unscheduled)
-- [`/party roles add`](#party-roles-add) (upcoming)
-- [`/party roles remove`](#party-roles-remove) (upcoming)
+- [`/party roles add`](#party-roles-add) (Production; upcoming in public source releases)
+- [`/party roles remove`](#party-roles-remove) (Production; upcoming in public source releases)
 - [`/party list`](#party-list)
 - [`/party edit`](#party-edit)
 - [`/party start`](#party-start)
@@ -90,7 +90,7 @@ Create a scheduled content signup party.
 | `template` | Yes | Text | Content template, or Blank to start from an empty form. Choose a matching autocomplete suggestion. |
 | `approval` | No | Text | Require host approval for signups. Choices: Host approval not required, Host approval required. |
 | `multisignup` | No | Text | Allow multiple users to sign up for each role. Choices: Multi-signup off, Multi-signup on. |
-| `role` | No | Discord role | Upcoming: initial eligible role; omit to allow everyone. |
+| `role` | No | Discord role | Initial eligible role; omit to allow everyone. |
 
 ### /party host unscheduled
 
@@ -105,7 +105,7 @@ Host a content signup party with no scheduled start.
 | `template` | Yes | Text | Content template, or Blank to start from an empty form. Choose a matching autocomplete suggestion. |
 | `approval` | No | Text | Require host approval for signups. Choices: Host approval not required, Host approval required. |
 | `multisignup` | No | Text | Allow multiple users to sign up for each role. Choices: Multi-signup off, Multi-signup on. |
-| `role` | No | Discord role | Upcoming: initial eligible role; omit to allow everyone. |
+| `role` | No | Discord role | Initial eligible role; omit to allow everyone. |
 
 ### /party roles add
 
@@ -113,7 +113,7 @@ Host a content signup party with no scheduled start.
 /party roles add <role>
 ```
 
-Upcoming. The current host adds one eligible Discord role using the native role picker, inside an open party thread. Any one configured role permits signup. Adding the first requirement rechecks existing signups and pending requests. Further additions broaden eligibility. `@everyone` is rejected; leave the gate empty to permit everyone.
+**Available in Production; upcoming in public source releases.** The current host adds one eligible Discord role using the native role picker, inside an open party thread. Any one configured role permits signup. Adding the first requirement rechecks existing signups and pending requests. Further additions broaden eligibility. `@everyone` is rejected; leave the gate empty to permit everyone.
 
 ### /party roles remove
 
@@ -121,7 +121,7 @@ Upcoming. The current host adds one eligible Discord role using the native role 
 /party roles remove <role>
 ```
 
-Upcoming. The current host removes one saved eligible role using autocomplete in the party thread. Saved names and IDs keep deleted Discord roles removable. Removing an alternative can remove newly ineligible signups and requests; removing the final role permits everyone. Duplicate additions and absent removals do nothing.
+**Available in Production; upcoming in public source releases.** The current host removes one saved eligible role using autocomplete in the party thread. Saved names and IDs keep deleted Discord roles removable. Removing an alternative can remove newly ineligible signups and requests; removing the final role permits everyone. Duplicate additions and absent removals do nothing.
 
 Host assignments through `/party add` are exempt until the user leaves or is removed. Ordinary approval acceptance does not grant an exemption. Role losses are reconciled automatically; failed lookups preserve existing signups. One thread line notifies each removed member. See [role eligibility]({{ '/guides/parties-templates/#eligible-discord-roles-upcoming' | relative_url }}) for details.
 
