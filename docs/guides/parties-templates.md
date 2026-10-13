@@ -21,9 +21,9 @@ In the thread's pinned roster, click **Join** and select a named role. Click **S
 
 When approval is required, a request does not reserve a place or count as a signup. The host accepts or declines using request controls or `/party accept` and `/party decline`. A requested move preserves your existing confirmed place until acceptance. Host self-signup and host assignments remain immediate. Hosts use `/party add` for named roles; they cannot assign another user directly to standby.
 
-## Eligible Discord roles (upcoming)
+## Eligible Discord roles {#eligible-discord-roles-upcoming}
 
-Role gates are upcoming in public source releases, absent from **0.1.0-alpha.1**, and not yet deployed to Production.
+Role gates are available in Production. They remain upcoming in public source releases and are absent from **0.1.0-alpha.1**.
 
 Optionally select one **Eligible role** in the button hosting setup, after Multi-signup and before Continue. This is a searchable Discord role dropdown with zero or one selection. Clearing it allows everyone. Continue opens the existing details form; Retry preserves the chosen role. The hosting commands offer the equivalent optional `role` input. Eligibility roles are Discord roles, separate from the named Tank/Healer-style slots in the form.
 

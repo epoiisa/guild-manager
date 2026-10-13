@@ -9,7 +9,7 @@ Public release **0.1.0-alpha.1**. [Command index]({{ "/reference/" | relative_ur
 
 The manual Ping entry below is available in Production. It remains upcoming for public source releases and is not included in this published release's source or downloads.
 
-**Role gates are upcoming in public source releases, absent from 0.1.0-alpha.1, and not yet deployed to Production.** The optional hosting `role` input and `/party roles` commands below belong to that upcoming feature.
+**Role gates are available in Production; upcoming in public source releases.** The optional hosting `role` input and `/party roles` commands below are absent from **0.1.0-alpha.1**.
 
 Content templates define signup layouts; parties use a selected template to create a content thread and signup controls in the configured content channel.
 
