@@ -21,6 +21,20 @@ In the thread's pinned roster, click **Join** and select a named role. Click **S
 
 When approval is required, a request does not reserve a place or count as a signup. The host accepts or declines using request controls or `/party accept` and `/party decline`. A requested move preserves your existing confirmed place until acceptance. Host self-signup and host assignments remain immediate. Hosts use `/party add` for named roles; they cannot assign another user directly to standby.
 
+## Eligible Discord roles (upcoming)
+
+Role gates are upcoming in public source releases, absent from **0.1.0-alpha.1**, and not yet deployed to Production.
+
+Optionally select one **Eligible role** in the button hosting setup, after Multi-signup and before Continue. This is a searchable Discord role dropdown with zero or one selection. Clearing it allows everyone. Continue opens the existing details form; Retry preserves the chosen role. The hosting commands offer the equivalent optional `role` input. Eligibility roles are Discord roles, separate from the named Tank/Healer-style slots in the form.
+
+After publication, the current host uses `/party roles add <role>` or `/party roles remove <role>` in the open party thread, including after starting. The pinned roster shows **Eligible roles: Everyone** or role mentions joined by **or**, without pinging the roles. Members need only one listed role. Removing the final requirement opens signups to everyone; templates do not save these requirements.
+
+The gate covers named slots, Standby, signup requests and approval acceptance. Hosting alone does not qualify a participant. Explicit `/party add` assignments are exempt for the user's current signup, including subsequent moves, role losses, gate edits and host transfers. Leaving or removal ends that exemption. Accepting an ordinary signup request does not create one, and capacity limits still apply.
+
+Adding the first role restricts an unrestricted party; adding more alternatives broadens eligibility. Removing an alternative can also disqualify existing users. Gate edits and later Discord role losses remove ineligible signups and requests, preserving host exemptions. Each affected member gets one thread notification: “@User, your signup was removed because you no longer meet this party’s role requirement.” Pending requests use equivalent wording; a signup and pending request are combined into one line.
+
+The bot checks role events and reconciles on startup and every minute. Unavailable Discord lookups preserve existing signups; an unverifiable gate edit makes no changes. A deleted role remains a nonmatching requirement until the host explicitly removes it, so deletion cannot silently open the party. Regaining eligibility never automatically restores a removed signup. Uncertain notification delivery is not automatically repeated.
+
 ## Manage the session
 
 The host's thread card offers **Start**, **End**, **Edit**, and **Cancel** as appropriate. Edit opens the title, description, and roles form. `/party edit` also supports scheduling changes and replacement images. `/party transfer` changes the host.
