@@ -7,6 +7,8 @@ permalink: /reference/applications-tickets/
 
 Public release **0.1.0-alpha.1**. [Command index]({{ "/reference/" | relative_url }}).
 
+**Class editing is upcoming in public source releases and is absent from 0.1.0-alpha.1. Production deployment is pending.** This includes the two `edit` commands, saved conversation settings, and class role-conflict checks described below.
+
 Application classes define reviewed membership workflows. Ticket classes define private conversations without deciding membership. Both use entry buttons attached to bot-authored messages.
 
 ## Access and outcomes
@@ -21,6 +23,14 @@ Ticket openers and class reviewers can close and reopen their tickets. Only clas
 
 Creating a class does not place its entry button. Post a message as Guild Manager, then attach the button using its channel and Discord message ID. Questions and message settings open forms. Disabling a class stops new entries; removing it requires confirmation and removes the class and associated channels.
 
+## Class editing and saved settings (upcoming)
+
+Edits affect new conversations. Each application saves its class name, category, reviewer role, and optional applicant role when it opens; each ticket saves the first three. Existing conversations retain those settings through review, close, reopen, and cleanup. Their channels, permissions, reviewer authority, and applicant roles are not changed by editing the class. Edits do not notify participants. Existing questions, answers, configured messages, and explicit entry-button labels keep their existing behavior.
+
+Supply at least one setting to edit. Omitted inputs remain unchanged. Applicant roles can be added or replaced, not removed; general tickets have no applicant role. Disabled classes can be edited without enabling intake. Archived application classes cannot be edited. The Discord server, Albion Online server, target group, and application outcome type remain fixed. Names must contain 1–80 characters after trimming spaces and be unique without regard to case within the Discord server and class type.
+
+Create and edit reject `@everyone` as an applicant role and reject using a role for both applicants and reviewers across current application and ticket classes in the same Discord server. Disabled classes are included; archived classes and historical conversation settings are excluded. Sharing reviewer roles with other reviewers, or applicant roles with other applicants, is allowed. Reusing a role retained by older conversations can therefore give its new holders authority over those older conversations.
+
 ## Commands
 
 - [`/application accept`](#application-accept)
@@ -34,6 +44,7 @@ Creating a class does not place its entry button. Post a message as Guild Manage
 - [`/applications list`](#applications-list)
 - [`/applications show`](#applications-show)
 - [`/applications create`](#applications-create)
+- [`/applications edit` (upcoming)](#applications-edit)
 - [`/applications button add`](#applications-button-add)
 - [`/applications questions set`](#applications-questions-set)
 - [`/applications questions clear`](#applications-questions-clear)
@@ -47,6 +58,7 @@ Creating a class does not place its entry button. Post a message as Guild Manage
 - [`/tickets list`](#tickets-list)
 - [`/tickets show`](#tickets-show)
 - [`/tickets create`](#tickets-create)
+- [`/tickets edit` (upcoming)](#tickets-edit)
 - [`/tickets button add`](#tickets-button-add)
 - [`/tickets messages set`](#tickets-messages-set)
 - [`/tickets messages clear`](#tickets-messages-clear)
@@ -190,6 +202,24 @@ Create a membership application class.
 | `category` | Yes | Discord channel | Category where application ticket channels are created. |
 | `reviewer` | Yes | Discord role | Role allowed to review applications. |
 | `role` | No | Discord role | Optional role granted while a ticket is open. |
+
+### /applications edit
+
+```text
+/applications edit <application> [name] [category] [reviewer] [role]
+```
+
+Edit an application class for new conversations. Upcoming in public source releases; absent from **0.1.0-alpha.1**. Production deployment is pending.
+
+| Input | Required | Type | Meaning and accepted values |
+| --- | --- | --- | --- |
+| `application` | Yes | Text | Application class. Choose a matching autocomplete suggestion. |
+| `name` | No | Text | Replacement class name, 1–80 characters. |
+| `category` | No | Discord channel | Category for new application channels. |
+| `reviewer` | No | Discord role | Reviewer role for new applications. |
+| `role` | No | Discord role | Applicant role for new applications; add or replace only. |
+
+Omitted settings remain unchanged. Existing applications keep their saved settings, including when reopened. See [class editing and saved settings](#class-editing-and-saved-settings-upcoming).
 
 ### /applications button add
 
@@ -352,6 +382,23 @@ Create a general ticket class.
 | `name` | Yes | Text | Staff-facing ticket name. Minimum length: 1 character. Maximum length: 80 characters. |
 | `category` | Yes | Discord channel | Category where ticket channels are created. |
 | `reviewer` | Yes | Discord role | Role allowed to review tickets. |
+
+### /tickets edit
+
+```text
+/tickets edit <ticket> [name] [category] [reviewer]
+```
+
+Edit a ticket class for new conversations. Upcoming in public source releases; absent from **0.1.0-alpha.1**. Production deployment is pending.
+
+| Input | Required | Type | Meaning and accepted values |
+| --- | --- | --- | --- |
+| `ticket` | Yes | Text | Ticket class. Choose a matching autocomplete suggestion. |
+| `name` | No | Text | Replacement class name, 1–80 characters. |
+| `category` | No | Discord channel | Category for new ticket channels. |
+| `reviewer` | No | Discord role | Reviewer role for new tickets. |
+
+Omitted settings remain unchanged. Existing tickets keep their saved settings, including when reopened. See [class editing and saved settings](#class-editing-and-saved-settings-upcoming).
 
 ### /tickets button add
 

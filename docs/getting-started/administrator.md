@@ -49,6 +49,8 @@ Use `/manager add` to assign Discord manager roles for `account`, `regear`, or `
 
 Applications and tickets use a reviewer role chosen when their classes are created. Party hosts control their own parties. These authorities are different; giving a member one manager role does not make them a manager of every feature.
 
+[Class editing]({{ '/reference/applications-tickets/#class-editing-and-saved-settings-upcoming' | relative_url }}) is upcoming in public source releases, absent from **0.1.0-alpha.1**, and pending Production deployment. With that update, each conversation keeps the reviewer role saved when it opened; changing a class reviewer affects new conversations only.
+
 ## 5. Grant command access
 
 Commands are hidden from ordinary members by default. In Discord **Server Settings → Integrations**, select your bot and grant the appropriate command access to your member and officer roles.

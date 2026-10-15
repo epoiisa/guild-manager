@@ -28,6 +28,8 @@ An Integration override controls whether a member can invoke a command. It does 
 
 Party approval belongs to the current host; Administrator permission alone does not grant that approval authority. Consult each feature guide for its exact exceptions.
 
+[Class editing and saved conversation settings]({{ '/reference/applications-tickets/#class-editing-and-saved-settings-upcoming' | relative_url }}) are upcoming in public source releases, absent from **0.1.0-alpha.1**, and pending Production deployment. With that update, application and ticket reviewer authority comes from the role saved on the conversation, including after reopening. Editing its class does not transfer that authority.
+
 `/channel set|clear|show` and `/manager add|remove|list` require Discord Administrator permission, including their read operations. Manager roles are specific to a system and apply across all Albion Online servers in the invoking Discord server.
 
 ## Buttons and forms

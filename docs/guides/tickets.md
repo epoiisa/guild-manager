@@ -16,6 +16,16 @@ General tickets provide a private conversation with a configured reviewer role. 
 
 The category and bot permissions must allow creation and management of the private channel. Discord Administrators retain Discord-level visibility.
 
+## Edit a class (upcoming)
+
+Class editing and saved conversation settings are upcoming in public source releases and absent from **0.1.0-alpha.1**. Production deployment is pending.
+
+Use `/tickets edit <ticket> [name] [category] [reviewer]` to change settings for new tickets. Omitted settings remain unchanged, and disabled classes remain disabled. The Discord server stays fixed; general tickets have no applicant-role setting.
+
+Each ticket retains the name, category, and reviewer role saved when it opened, including after closing and reopening. Editing does not rename or move its channel, transfer reviewer access or authority, or notify its participants. Configured messages and explicit entry-button labels keep their existing behavior.
+
+Create and edit reject a reviewer role currently used as an applicant role by a non-archived application class in this Discord server, including a disabled class. Reviewer roles may be shared. Historical conversation roles are excluded from the check; see the [reference]({{ '/reference/applications-tickets/#class-editing-and-saved-settings-upcoming' | relative_url }}) for that limitation.
+
 ## Open and use a ticket
 
 Click the configured entry button. Guild Manager creates the conversation channel and posts an opening card identifying the opener and reviewer role. Discuss the issue there; general tickets have no claim or assigned-reviewer mechanism.

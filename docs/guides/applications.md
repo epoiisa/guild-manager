@@ -16,6 +16,16 @@ Applications combine a private conversation, an exact Albion Online character se
 
 `/applications disable` stops new intake. Removing a class is a separate confirmed operation that can remove its conversations.
 
+## Edit a class (upcoming)
+
+Class editing and saved conversation settings are upcoming in public source releases and absent from **0.1.0-alpha.1**. Production deployment is pending.
+
+Use `/applications edit <application> [name] [category] [reviewer] [role]` to change settings for new applications. Omitted settings stay unchanged. The applicant role is optional and can be added or replaced, but cannot be removed. The Discord server, Albion Online server, and target group stay fixed. Disabled classes remain disabled; archived classes cannot be edited.
+
+Each application retains the name, category, reviewer role, and optional applicant role saved when it opened. Existing conversations continue with their original reviewers and applicant roles, including after closing and reopening. Editing does not rename or move their channels, change their access, or notify participants. Configured questions and messages, stored answers, and explicit entry-button labels retain their existing behavior.
+
+Create and edit check current role settings: applicant roles cannot be `@everyone` or a reviewer role on any application or ticket class in this Discord server, and reviewers cannot use a current applicant role. Disabled classes count; archived classes and roles saved only on older conversations do not. Roles may be shared for the same purpose. See the [reference]({{ '/reference/applications-tickets/#class-editing-and-saved-settings-upcoming' | relative_url }}) for the historical role-reuse limitation.
+
 ## Apply
 
 Click the configured entry button and complete the form. In your application channel, explicitly select the correct Albion Online character, even if only one result appears. The bot then posts the review summary, configured instructions, and your answers.
