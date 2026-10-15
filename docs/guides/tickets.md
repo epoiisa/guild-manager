@@ -18,7 +18,7 @@ The category and bot permissions must allow creation and management of the priva
 
 ## Edit a class (upcoming)
 
-Class editing and saved conversation settings are upcoming in public source releases and absent from **0.1.0-alpha.1**. Production deployment is pending.
+Class editing and saved conversation settings are available in Production (verified 15 October 2026 UTC). They remain upcoming in public source releases and absent from **0.1.0-alpha.1**.
 
 Use `/tickets edit <ticket> [name] [category] [reviewer]` to change settings for new tickets. Omitted settings remain unchanged, and disabled classes remain disabled. The Discord server stays fixed; general tickets have no applicant-role setting.
 

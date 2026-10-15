@@ -18,7 +18,7 @@ Applications combine a private conversation, an exact Albion Online character se
 
 ## Edit a class (upcoming)
 
-Class editing and saved conversation settings are upcoming in public source releases and absent from **0.1.0-alpha.1**. Production deployment is pending.
+Class editing and saved conversation settings are available in Production (verified 15 October 2026 UTC). They remain upcoming in public source releases and absent from **0.1.0-alpha.1**.
 
 Use `/applications edit <application> [name] [category] [reviewer] [role]` to change settings for new applications. Omitted settings stay unchanged. The applicant role is optional and can be added or replaced, but cannot be removed. The Discord server, Albion Online server, and target group stay fixed. Disabled classes remain disabled; archived classes cannot be edited.
 

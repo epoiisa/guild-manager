@@ -7,7 +7,7 @@ permalink: /reference/applications-tickets/
 
 Public release **0.1.0-alpha.1**. [Command index]({{ "/reference/" | relative_url }}).
 
-**Class editing is upcoming in public source releases and is absent from 0.1.0-alpha.1. Production deployment is pending.** This includes the two `edit` commands, saved conversation settings, and class role-conflict checks described below.
+**Class editing is available in Production (verified 15 October 2026 UTC). It remains upcoming in public source releases and is absent from 0.1.0-alpha.1.** This includes the two `edit` commands, saved conversation settings, and class role-conflict checks described below.
 
 Application classes define reviewed membership workflows. Ticket classes define private conversations without deciding membership. Both use entry buttons attached to bot-authored messages.
 
@@ -209,7 +209,7 @@ Create a membership application class.
 /applications edit <application> [name] [category] [reviewer] [role]
 ```
 
-Edit an application class for new conversations. Upcoming in public source releases; absent from **0.1.0-alpha.1**. Production deployment is pending.
+Edit an application class for new conversations. Upcoming in public source releases; absent from **0.1.0-alpha.1**. Available in Production.
 
 | Input | Required | Type | Meaning and accepted values |
 | --- | --- | --- | --- |
@@ -389,7 +389,7 @@ Create a general ticket class.
 /tickets edit <ticket> [name] [category] [reviewer]
 ```
 
-Edit a ticket class for new conversations. Upcoming in public source releases; absent from **0.1.0-alpha.1**. Production deployment is pending.
+Edit a ticket class for new conversations. Upcoming in public source releases; absent from **0.1.0-alpha.1**. Available in Production.
 
 | Input | Required | Type | Meaning and accepted values |
 | --- | --- | --- | --- |
