@@ -16,6 +16,16 @@ Applications combine a private conversation, an exact Albion Online character se
 
 `/applications disable` stops new intake. Removing a class is a separate confirmed operation that can remove its conversations.
 
+## Publish with buttons already included (upcoming)
+
+**Available in Production (verified 18 October 2026). Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+
+Use `buttons:true` with `/message post`, `/message compose`, `/message v2`, or `/message forum` to prepare a new entry message privately. Choose **Add Application**, select an application class, and configure its label/style. You can mix application and ticket buttons, edit their order, and revise the message before **Post** creates the complete message. A forum thread is created only at that point. Disabled classes remain disabled.
+
+Current `/message` access authorizes both button types in this workflow, without a separate class-configuration command grant. Drafts expire 15 minutes after the original command and do not survive a restart. See the [administration guide]({{ '/guides/administration/#compose-entry-buttons-upcoming' | relative_url }}) for editing, cancellation, and recovery.
+
+`/applications button add` remains the immediate way to attach or update a button on an existing bot-authored message. It keeps its own command access rules, opens no draft, and may show Discord's `(edited)` label. Omitted or false `buttons` values keep the normal `/message` posting behavior.
+
 ## Edit a class (upcoming)
 
 Class editing and saved conversation settings are available in Production (verified 15 October 2026 UTC). They remain upcoming in public source releases and absent from **0.1.0-alpha.1**.

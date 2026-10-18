@@ -23,6 +23,16 @@ Slash commands default to disabled for ordinary members. Administrators control 
 
 `/bot name` and `/bot avatar` change the bot's identity in this Discord server. `/utc add` creates a managed voice channel showing UTC time; `/utc remove` deletes it.
 
+## Compose entry buttons (upcoming)
+
+**Available in Production (verified 18 October 2026). Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+
+The optional `buttons` switch on `/message post`, `/message compose`, `/message v2`, and `/message forum` defaults to `false`. Omitted or false keeps immediate posting after the normal inputs; only `buttons:true` opens a private draft with **Edit Message**, **Add Application**, **Add Ticket**, **Edit Buttons**, **Post**, and **Cancel**. Forums are created only on Post, with their complete starter message. Anyone with current `/message` access may configure both button types; separate `/applications` or `/tickets` grants are not required. Draft actions recheck `/message` access in the channel where the workflow began.
+
+The draft retains text, media, forum title, and V2 colour. Labels contain 1–80 characters and styles are Primary, Secondary, Success, or Danger. You can reorder/remove buttons or post after removing them all, provided text or media remains. Selecting the same class again opens its existing draft entry. Disabled classes remain disabled. Editing message text retains its current file unless a replacement is uploaded. Private previews are silent and do not open intake.
+
+Drafts belong to their initiating user and server, expire 15 minutes after the original command, and do not survive a restart. Post sends all buttons in the initial request; it does not edit the new public message to attach them. Later edits can still show Discord's `(edited)` label. An uncertain creation result will not resend automatically. A known post whose settings could not be saved offers **Retry Saving Settings** against that same post until expiry or restart. See the [administration guide]({{ '/guides/administration/#compose-entry-buttons-upcoming' | relative_url }}) for the complete workflow.
+
 ## Destructive lifecycle commands
 
 `/activate` registers active commands for the current Discord server. It is the activation-only command offered before Guild Manager is active.
@@ -237,7 +247,7 @@ This command has no slash-command inputs.
 ### /message post
 
 ```text
-/message post [channel] [message] [attachment]
+/message post [channel] [message] [attachment] [buttons]
 ```
 
 Post a message as Guild Manager.
@@ -247,11 +257,12 @@ Post a message as Guild Manager.
 | `channel` | No | Discord channel | Channel to post in. Defaults to the current channel. |
 | `message` | No | Text | Message text. Maximum length: 2000 characters. |
 | `attachment` | No | Attachment | Attachment to include. |
+| `buttons` | No | Boolean | Configure application or ticket buttons before posting. Defaults to false. Upcoming; see [availability and workflow](#compose-entry-buttons-upcoming). |
 
 ### /message compose
 
 ```text
-/message compose [channel] [attachment]
+/message compose [channel] [attachment] [buttons]
 ```
 
 Open a multiline editor and post as Guild Manager.
@@ -260,11 +271,12 @@ Open a multiline editor and post as Guild Manager.
 | --- | --- | --- | --- |
 | `channel` | No | Discord channel | Channel to post in. Defaults to the current channel. |
 | `attachment` | No | Attachment | Attachment to include. |
+| `buttons` | No | Boolean | Configure application or ticket buttons before posting. Defaults to false. Upcoming; see [availability and workflow](#compose-entry-buttons-upcoming). |
 
 ### /message v2
 
 ```text
-/message v2 [color] [channel]
+/message v2 [color] [channel] [buttons]
 ```
 
 Compose a message with a coloured container and optional image.
@@ -273,11 +285,12 @@ Compose a message with a coloured container and optional image.
 | --- | --- | --- | --- |
 | `color` | No | Text | Accent colour. Defaults to Slate. Choose a colour or enter #RRGGBB. Choose a matching autocomplete suggestion. |
 | `channel` | No | Discord channel | Channel to post in. Defaults to the current channel. |
+| `buttons` | No | Boolean | Configure application or ticket buttons before posting. Defaults to false. Upcoming; see [availability and workflow](#compose-entry-buttons-upcoming). |
 
 ### /message forum
 
 ```text
-/message forum [channel] [attachment]
+/message forum [channel] [attachment] [buttons]
 ```
 
 Open an editor and create a forum post as Guild Manager.
@@ -286,6 +299,7 @@ Open an editor and create a forum post as Guild Manager.
 | --- | --- | --- | --- |
 | `channel` | No | Discord channel | Forum channel. Defaults to the current forum when used from a forum thread. |
 | `attachment` | No | Attachment | Attachment to include. |
+| `buttons` | No | Boolean | Configure application or ticket buttons before posting. Defaults to false. Upcoming; see [availability and workflow](#compose-entry-buttons-upcoming). |
 
 ### /message edit
 

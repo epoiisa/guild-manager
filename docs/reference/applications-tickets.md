@@ -9,7 +9,7 @@ Public release **0.1.0-alpha.1**. [Command index]({{ "/reference/" | relative_ur
 
 **Class editing is available in Production (verified 15 October 2026 UTC). It remains upcoming in public source releases and is absent from 0.1.0-alpha.1.** This includes the two `edit` commands, saved conversation settings, and class role-conflict checks described below.
 
-Application classes define reviewed membership workflows. Ticket classes define private conversations without deciding membership. Both use entry buttons attached to bot-authored messages.
+Application classes define reviewed membership workflows. Ticket classes define private conversations without deciding membership. Both use entry buttons on bot-authored messages.
 
 ## Access and outcomes
 
@@ -22,6 +22,16 @@ Reviewers can close an undecided application. The applicant or reviewer can clos
 Ticket openers and class reviewers can close and reopen their tickets. Only class reviewers can delete a closed ticket. Omit the optional operational target when running a command inside its own application or ticket channel; otherwise select the target with autocomplete.
 
 Creating a class does not place its entry button. Post a message as Guild Manager, then attach the button using its channel and Discord message ID. Questions and message settings open forms. Disabling a class stops new entries; removing it requires confirmation and removes the class and associated channels.
+
+## Publish entry messages with buttons (upcoming)
+
+**Available in Production (verified 18 October 2026). Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+
+Only `buttons:true` on the four `/message` creation commands opens a private draft for mixed application and ticket buttons. An officer with current `/message` access may select either class type without a separate `/applications` or `/tickets` grant. The draft supports labels, styles, ordering, removal, text/title edits, and optional replacement media, retaining the current file when no replacement is supplied. It creates the complete message or forum starter only on **Post**; **Cancel** saves no settings and creates nothing. Disabled classes stay disabled.
+
+Drafts expire 15 minutes after the command began and are lost on restart. Each class retains one configured source location; publishing does not remove older button copies. An uncertain create result does not resend. A known post with unsaved settings offers **Retry Saving Settings** against the same post within the remaining draft lifetime. See the [administration guide]({{ '/guides/administration/#compose-entry-buttons-upcoming' | relative_url }}).
+
+The existing immediate `/applications button add` and `/tickets button add` commands remain available with their original permissions, validation, and private receipt. They add or update a button on an existing supported Guild Manager message without a draft or additional confirmation, and may produce Discord's `(edited)` label. Application add keeps its text/announcement channel picker; ticket add keeps its existing channel-picker behavior. The new forum composer does not change either command.
 
 ## Class editing and saved settings (upcoming)
 
