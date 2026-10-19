@@ -34,3 +34,9 @@ The bot is a background process. It does not expose a website or HTTP health-che
 For independent testing, use a separate Discord application and database from your live instance. Sharing a database causes runtimes to contend for the same lock; sharing an application can let command registration and events interfere.
 
 Continue with [Discord application setup]({{ '/self-hosting/discord-setup/' | relative_url }}).
+
+## Image storage requirements (upcoming)
+
+**Upcoming in public source releases; absent from 0.1.0-alpha.1. Production availability has not been verified for template images.**
+
+Reusable template/party images require your own private R2 Standard bucket, a scoped credential, outbound HTTPS to R2, and protected independent backup storage. No persistent worker disk or HTTP image server is needed. The package adds `sharp` (including its platform-specific libvips dependency) and the AWS SDK S3 client; install from the matching Node.js 22 lockfile on the target platform. Validate memory with representative graphics. Text-only operation remains available without R2 configuration.

@@ -50,3 +50,9 @@ This release has no HTTP endpoint or built-in web health check. Check process lo
 For an interactive foreground run, press **Ctrl+C**. A service manager should send `SIGTERM` and allow the process to finish shutting down. The bot stops its background work, disconnects Discord, releases its runtime lock, and closes PostgreSQL connections.
 
 Loss of the runtime-lock connection triggers shutdown so the process does not continue without exclusive database ownership. Investigate repeated exits using [troubleshooting]({{ '/self-hosting/troubleshooting/' | relative_url }}).
+
+## Image lifecycle checks (upcoming)
+
+**Upcoming in public source releases; absent from 0.1.0-alpha.1. Production availability has not been verified for template images.**
+
+Configure and verify the exact private bucket before enabling uploads. Image cleanup and optional existing-image normalization run under the active runtime's existing maintenance lifecycle. No mutating media task runs in pre-deploy. Inspect storage warnings and use `node dist/ops/images.js inventory` for quota, upload, deletion and normalization metadata. A logical reset can finish while remote object deletion remains pending; retrying cleanup must preserve other servers and new storage generations. Restart ends private drafts, while saved template/party images remain recoverable.

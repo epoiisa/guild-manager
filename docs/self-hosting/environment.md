@@ -40,3 +40,22 @@ Do not add a Discord server ID to the environment file. The bot discovers Discor
 Keep `.env`, database connection strings, and bot tokens out of Git, screenshots, support messages, and public logs. Use a private secret store or the hosting service's secret settings for managed deployments. If a bot token is exposed, reset it in the Developer Portal and update the instance before restarting.
 
 Continue with [running the bot]({{ '/self-hosting/running/' | relative_url }}).
+
+## Private signup-image storage (upcoming)
+
+**Upcoming in public source releases; absent from 0.1.0-alpha.1. Production availability has not been verified for template images.**
+
+Create your own private Cloudflare R2 Standard bucket and bucket-scoped Object Read & Write credentials. Use separate buckets/credentials for testing and live use. Keep public access, custom domains and object-age deletion rules off. Supply credentials through your secret store; never use another operator's storage.
+
+| Variable | Meaning |
+|---|---|
+| `IMAGE_STORAGE_ENABLED` | `true` enables configured storage; defaults to disabled. |
+| `IMAGE_STORAGE_SCOPE` | Required when enabled: `local` (256 MiB total) or `production` (4 GiB total). |
+| `R2_ACCOUNT_ID`, `R2_BUCKET` | Exact reviewed account and private bucket. |
+| `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY` | Separate scoped credentials for this bucket. |
+| `IMAGE_SERVER_LIMIT_BYTES` | Optional positive-byte override; default 536870912 (512 MiB). |
+| `IMAGE_GLOBAL_LIMIT_BYTES` | Optional total-byte override after capacity/cost review. |
+| `IMAGE_COLLECTION_ENABLED` | Defaults to `true`; set `false` for recovery until state is reconciled. |
+| `IMAGE_NORMALIZATION_ENABLED` | Defaults to `false`; enable bounded adoption after existing-image inventory/review. |
+
+The 15 MiB/image limit remains fixed. Animated PNG is rejected; static PNG and bounded GIF/WebP animation are supported. Provisional decode bounds are 20 million pixels per frame, 50 million overall and 1,000 frames; validate representative graphics and peak memory before enabling a live installation. Application limits do not cap the Cloudflare account bill.

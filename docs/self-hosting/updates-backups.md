@@ -46,3 +46,17 @@ These examples assume your PostgreSQL role can create databases and restore the 
 Use the corresponding release when validating the restored database, and use a separate test Discord application and server. A restored database may contain references to live Discord resources; do not let a recovery test operate on the live server.
 
 If an update fails, stop the new process first. Recover using a compatible release and a verified backup. Restoring a backup loses database changes made since that backup; it also does not undo messages, roles, or channels already changed in Discord. Check both database state and Discord resources after recovery.
+
+## Paired image backups (upcoming)
+
+**Upcoming in public source releases; absent from 0.1.0-alpha.1. Production availability has not been verified for template images.**
+
+Once records reference R2 images, a database-only export is incomplete. `node dist/ops/images.js backup /absolute/protected/new-directory` creates a consistent custom database archive, image manifest and independent hash-verified media copies. Configure operator database/R2 access and PostgreSQL 18 tools (`POSTGRES_BIN` if needed). The destination must be outside the project and Git repositories, protected from runtime deletion. `node dist/ops/images.js verify /absolute/protected/directory` verifies the pair.
+
+Backups are complete only with `manifest.json` and all verified files. Interrupted copying retains a durable hold; inspect `inventory` and the backup's `incomplete.json` before explicitly cancelling an abandoned hold with `cancel-backup-hold <UUID>`. Pending or interrupted manifests remain verification journals. A remaining `incomplete.json` means completion is unresolved even if `manifest.json` exists. `node dist/ops/images.js recover-backup /absolute/protected/directory` rechecks the matching database checkpoint and independent files; cancelled runs and missing copies cannot be promoted. Retain media copies for the lifetime of their complete manifests. Separate operator credentials and protected storage are essential; R2 durability is not an accidental-deletion backup.
+
+Ordinary unreferenced media remains for eight days; never-referenced resolved uploads remain for 24 hours. Archived party references persist. Reset/deactivation bypass ordinary grace and do not erase independent backups or Discord copies. Do not configure an R2 age rule that can delete referenced images.
+
+For recovery, stop bot writes, set `IMAGE_COLLECTION_ENABLED=false`, restore the reviewed database and reconcile newer purge decisions, generations, unresolved uploads and objects. After explicit reconciliation, `IMAGE_RESTORE_PURGE_RECONCILED=true` permits `node dist/ops/images.js restore-media /absolute/protected/directory`; it acquires the runtime lock, matches database identities and uses verified create-only writes. It does not restore the database or erase tombstones. Test rendering with isolated Discord credentials before resuming collection. Older code cannot safely preserve schema 54 image lifecycles; use a compatible revision.
+
+Before adopting existing graphics, inventory every retained party, including archived records, and resolve missing/inaccessible/invalid/over-limit images explicitly. Bounded normalization retains the original Discord attachment association without rewriting archived cards. A database PITR point still needs every referenced image; deliberate purge or bucket loss can make it incomplete.

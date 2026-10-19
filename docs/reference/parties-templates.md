@@ -25,6 +25,20 @@ Scheduled hosting requires a UTC date and time. Unscheduled hosting omits a star
 
 See the UTC input rules in the [command index]({{ '/reference/' | relative_url }}).
 
+## Template image controls (upcoming)
+
+**Upcoming in public source releases; absent from 0.1.0-alpha.1. Production availability has not been verified for template images.**
+
+Slash-command signatures below are unchanged. Create/edit/capture forms have a fifth optional **Builds graphic** field (one PNG, JPEG, WebP or GIF, maximum 15 MiB subject to Discord/decoder limits). Animated PNG is not supported. Empty edit keeps the current image; a new upload replaces it atomically with the text save. Capture preserves the exact source party image unless replaced, including accessible retained terminal parties; changed source revisions require a fresh capture.
+
+`/template show` renders a private preview with **Remove Image**. The button is bound to the viewer, original channel and template revision, expires after 15 minutes and rechecks current `/template` permission. Image-preview failure leaves the text readable. Removal changes only the template reference. Lists and autocomplete do not download images.
+
+Both hosting commands open the details form directly; both Content panel routes open it through **Continue**. Fields appear as Title, Description, Roles one per line, **Use template’s image** only when the selected template has an image, then **Builds graphic**. The checkbox defaults checked; unchecked without a replacement creates no image. New or retained validated uploads override it for this party only. Retry retains text, checkbox state and validated uploads, with a notice explaining that an empty upload control keeps the retained file. Changed/deleted templates require **Use Current Template** or **Use Blank**, retaining those values and opening the form directly. Recovery never extends the original 15-minute expiry. Direct party replacements use the same storage validator and preserve current host/waiting-state restrictions.
+
+This simplified form and scheduled panel setup are upcoming in public source releases, absent from **0.1.0-alpha.1**, and not verified in Production. Scheduled setup uses **Host Scheduled** with **Template**, **Date and Time**, and **Settings** headings. Template selection precedes UTC date, hour, and minutes; the schedule summary appears immediately after minutes and before Settings. The summary uses a bold **Scheduled** label followed by inline code, for example: **Scheduled** `21:00 UTC on Thursday 22 October 2026`. Its 24-hour time and Australian-style date are UTC, without a native Discord timestamp. Settings contains Host approval, Multi-signup, and Eligible role, followed by Continue/Cancel. Unscheduled setup uses **Host Unscheduled**, **Template**, and **Settings**. Both omit introductory prose. Date and hour start unset; untouched minutes show **Minutes (default 00)** with no selected option and are accepted as **00**. Explicit minute choices run from **00** through **55** in five-minute steps. Hour choices are **00–23** plus **24 — End of selected day**; hour 24 selects and disables minute **00** and shows the next-day absolute UTC date/time. Midnight never silently advances the selected date. Continue opens the form without scheduling fields and checks the start is future; submission checks again. **Edit setup** corrects a passed start while retaining entered values and a validated upload. Slash signatures and exact-minute inputs are unchanged.
+
+An unresolved save outcome retires the affected controls and asks the user to inspect `/template list` and `/template show`, or the existing party, before retrying. Unconfirmed publication is not automatically repeated, and possibly saved party messages are preserved.
+
 ## Commands
 
 - [`/join`](#join)
