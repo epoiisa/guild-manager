@@ -55,6 +55,8 @@ The `/message` commands provide posting, composing, forum posts, reposting, edit
 
 For an ordinary message, choose `/message post` or `/message compose` with `buttons:true`. Use `/message v2` for a coloured container with an optional image, or `/message forum` for a forum title and body. All four keep their existing immediate behavior when `buttons` is omitted or false. With true, compose, V2, and forum collect their usual form first; its submission opens the private draft. No public message or forum thread exists until **Post**.
 
+**Upcoming display refinement, prepared locally; not yet verified in Production:** the draft uses a level-one **Message Draft** heading and level-two **Destination Channel**, **Message**, and **Buttons (count)** headings. V2 drafts add a level-two **Accent** heading directly after **Destination Channel** and before **Message**, with the uppercase `#RRGGBB` colour in inline backticks. Message text appears in a plain-text code block. The expiry timestamp is hidden; drafts still expire after 15 minutes.
+
 1. Review the destination, text preview or labelled excerpt, media filename, and any forum title or V2 colour.
 2. Choose **Add Application** or **Add Ticket**, select a class, and set its label and style in **Configure Button**. Labels contain 1–80 characters; styles are Primary, Secondary, Success, and Danger. Disabled classes remain disabled.
 3. Use **Edit Buttons** to use **Edit Label / Style**, **Remove**, **Move Earlier**, or **Move Later**. A class appears once per type. The ordered summary shows five entries per page; selectors show up to 25, with navigation for the rest.
