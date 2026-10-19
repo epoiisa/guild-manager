@@ -41,6 +41,14 @@ Drafts belong to their initiating user and server, expire 15 minutes after the o
 
 See the UTC input rules in the [command index]({{ '/reference/' | relative_url }}).
 
+## Membership and authority logging (upcoming)
+
+**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+
+The `log` destination adds committed position and authority changes, changed main/nickname preferences, confirmed temporary applicant-role consequences, detailed restoration/expiry and kick-cleanup outcomes. `/manager add|remove` logs only actual binding changes, including Re-gears even when its private command receipt is silent. Repeated additions and nonexistent removals stay silent. A binding change does not prove every holder gained or lost effective authority.
+
+`/update` keeps aggregate counts and adds actual membership restorations, final expiry and newly started grace deadlines. Whole-group removal reports **members affected**, not successful Discord updates. New registration holds use their saved duration and separately labelled deadline. Successful role/nickname changes and incomplete work remain distinct from saved records. `/audit` and clean no-change updates remain silent. See the [administration guide]({{ '/guides/administration/#membership-and-authority-log-upcoming' | relative_url }}) for coverage, actor attribution and delivery limits. No slash-command signature changes are introduced.
+
 ## Commands
 
 - [`/activate`](#activate)

@@ -53,3 +53,11 @@ Acceptance into a configured Albion Online guild or Albion Online alliance requi
 Closing an undecided application preserves its selection and answers. Reopening restores its appropriate controls and temporary role. Reopening a completed conversation does not undo the original decision. Only reviewers can permanently delete a closed application channel.
 
 Use the current card's controls, or the `/application` lifecycle commands. Inside the application channel, its target option can be omitted. Outside it, select the specific conversation from autocomplete. A command permission grant does not replace the configured reviewer requirement.
+
+## Application role history (upcoming)
+
+**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+
+The optional Log feed records confirmed temporary applicant-role changes from intake, acceptance/verification, rejection, withdrawal, close/cancel/reopen, deletion, class removal and external channel deletion. Commands, buttons and forms share the same behavior. Another active application or membership entitlement can retain the role; no removal is claimed in that case. Transitions with no membership or role consequence stay silent, and incomplete cleanup keeps its warning.
+
+Reviewer actions identify the completing reviewer. Applicant self-service and external cleanup identify affected users without presenting them as officers. Class creation, actual reviewer-role edits and removal record the changed binding; unrelated class edits remain silent. Retained conversations keep their saved reviewer role. See the [administration guide]({{ '/guides/administration/#membership-and-authority-log-upcoming' | relative_url }}).

@@ -15,6 +15,20 @@ Each panel feature has one channel shared across applicable Albion Online server
 
 `/channel set log` enables a concise membership and registration audit feed. Review channel visibility before configuring it. The feed omits conversations, answers, and proof, and failed delivery does not reverse a successful action.
 
+## Membership and authority log (upcoming)
+
+**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+
+The optional Log feed adds committed position appointments, dismissals and deletion; main-character and nickname-preference changes; manager bindings; reviewer-role settings; and confirmed temporary application-role changes. It identifies the completing officer for officer actions. Self-service actions identify the affected member, and automatic cleanup has no invented actor. Mentions never notify.
+
+Stored appointments and actual Discord access are separate facts. Orphaned appointments still count; a shared role stays assigned while another entitlement needs it. Position deletion also cleans up its retired role when appropriate. Repeated assignments remain silent unless an explicit appointment clears saved authority-role suppression or a real Discord repair succeeds. A saved nickname preference can succeed while applying it to Discord fails; the feed preserves that distinction and any partial-success warning.
+
+Membership updates retain concise counts and identify actual restored memberships and final expiry. New Discord registration holds and Albion Online membership grace periods show their separate saved deadlines in your local time. Officer recovery distinguishes restored registration, retained membership restoration and fresh verified membership. Relevant operations include actual appointment losses and Pending request cleanup counts without account balances, conversations or evidence.
+
+Kick reports authorized profile removals even without current registrations, the access block and any incomplete cleanup. Later successful cleanup is reported once. Officer reconnection reports restored Guild Manager access only when it actually clears a block; former appointments and authority do not return automatically. Whole-group summaries say **members affected**, without implying every Discord update succeeded.
+
+Manager and reviewer entries describe configuration bindings, not every role holder's effective authority. Class edits affect future conversations; retained conversations keep their saved reviewer settings. Reports, `/audit`, cancellations, unchanged state, unrelated configuration and arbitrary external role/nickname edits stay out of the feed. Delivery remains optional and best effort after changes commit, with silent mentions, no historical replay and lossless continuation for long entries.
+
 ## Audit and reconcile membership
 
 Use `/audit` to inspect proposed membership, role, and nickname changes without applying them. Read the attached report. Use `/update` to apply reconciliation and inspect its result attachment.

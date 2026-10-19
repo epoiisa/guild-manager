@@ -27,3 +27,11 @@ To add someone to a custom group, first register their character, then use `/mem
 Appointments belong to character profiles. Removing that profile also removes its appointments. Discord roles are reconciled from all surviving membership and appointment sources, so losing one source does not necessarily remove a role that another source still grants.
 
 If the stored entitlement is correct but the actual Discord role is missing, check the bot's role hierarchy and permissions, then use the [audit and update workflow]({{ '/guides/administration/' | relative_url }}).
+
+## Position change history (upcoming)
+
+**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+
+With a Log channel configured, appointments and dismissals identify the officer, Albion Online character and server, position, group and current Discord owner when present. New appointments, unchanged repeats and explicit reauthorization are distinct. Repeating `/position appoint` can deliberately clear saved authority-role suppression; ordinary recovery does not restore revoked authority.
+
+Deleting a position records its removed appointments, including orphaned profiles, and reconciles the deleted role even if no other configuration mentions it. Only confirmed Discord role changes are reported. Another entitlement can preserve a shared role; failed required changes retain warnings. Custom membership removal, whole-group removal, kick and final expiry include actual appointment losses. Unregistration and grace can retain appointments without current access, so they are not described as dismissals. See the [administration guide]({{ '/guides/administration/#membership-and-authority-log-upcoming' | relative_url }}).

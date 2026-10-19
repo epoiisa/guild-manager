@@ -21,6 +21,14 @@ Registration links an Albion Online character to a Discord user in this Discord 
 
 Self-registration can be blocked when officer recovery is required. An already-owned character cannot be registered to someone else without resolving ownership.
 
+## Membership and preference logging (upcoming)
+
+**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+
+The optional Log feed records changed `/member main set` selections with old/new Albion Online character identities and changed `/member nickname set|reset` preferences separately from confirmed Discord nickname updates. Repeated values stay silent unless a real Discord repair succeeds; a saved preference remains successful when Discord rejects its application.
+
+Officer recovery distinguishes actual restored registration, restored retained membership and new verified membership. New Discord holds and Albion Online membership grace use separate saved deadlines. Kick counts all authorized profiles removed, including eligible ownerless profiles without a current registration, while protecting a successor's records. Pending cleanup produces one later completion entry; `/character register` reports restored Guild Manager access only when it actually clears the user's block. Former authority and appointments do not return automatically. See the [administration guide]({{ '/guides/administration/#membership-and-authority-log-upcoming' | relative_url }}). Command signatures are unchanged.
+
 ## Commands
 
 - [`/character register`](#character-register)

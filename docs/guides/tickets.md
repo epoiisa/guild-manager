@@ -51,3 +51,9 @@ The opener or configured reviewers can **Close** the ticket. Closure retains the
 If controls appear stale or a channel is unavailable, ask a reviewer to inspect the stored conversation and current permissions. Repeatedly clicking an old control does not grant additional access.
 
 See [applications]({{ '/guides/applications/' | relative_url }}) for membership intake and the [command reference]({{ '/reference/' | relative_url }}) for exact options.
+
+## Reviewer configuration history (upcoming)
+
+**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+
+With a Log channel configured, ticket-class creation, actual reviewer-role changes and removal record the actor, class and relevant roles. Repeated or unrelated edits stay silent. Entries describe configuration changes; other grants may still authorize the same people. Existing conversations retain their saved reviewer role after class editing. Ordinary ticket conversations and lifecycle activity do not become a general conversation-history feed. See the [administration guide]({{ '/guides/administration/#membership-and-authority-log-upcoming' | relative_url }}).

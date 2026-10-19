@@ -31,3 +31,11 @@ Leaving Discord removes active ownership and begins a 72-hour registration hold.
 Confirmed departure from an Albion Online guild or Albion Online alliance removes access immediately and starts a separate minimum 72-hour membership grace period. Cleanup requires a later update that confirms continued absence. A verified return before actual cleanup can preserve retained entitlements. An unavailable Albion Online API is not proof of departure.
 
 See [administration]({{ '/guides/administration/' | relative_url }}) for `/kick` and reconciliation, and [accounts]({{ '/guides/accounts/' | relative_url }}) for balance consequences.
+
+## Membership change history (upcoming)
+
+**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+
+The optional Log feed distinguishes restored registration, restored retained membership and freshly verified membership. It identifies actual membership restoration and final expiry alongside ordinary update counts. A new Discord registration hold includes its saved duration and deadline; Albion Online membership grace has its own separately labelled deadline. Officer recovery also records grace periods first established during that recovery.
+
+Changed main selections identify the old and new Albion Online characters and servers. Nickname preferences are recorded separately from successful Discord nickname changes; saving a preference does not prove Discord accepted it. Repeated preferences and selections stay silent unless a real repair occurs. Kick and subsequent officer reconnection report actual block/cleanup transitions without claiming that revoked appointments or authority returned. See the [administration guide]({{ '/guides/administration/#membership-and-authority-log-upcoming' | relative_url }}).

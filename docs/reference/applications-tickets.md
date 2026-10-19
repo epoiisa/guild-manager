@@ -41,6 +41,14 @@ Supply at least one setting to edit. Omitted inputs remain unchanged. Applicant 
 
 Create and edit reject `@everyone` as an applicant role and reject using a role for both applicants and reviewers across current application and ticket classes in the same Discord server. Disabled classes are included; archived classes and historical conversation settings are excluded. Sharing reviewer roles with other reviewers, or applicant roles with other applicants, is allowed. Reusing a role retained by older conversations can therefore give its new holders authority over those older conversations.
 
+## Role and reviewer logging (upcoming)
+
+**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+
+The optional Log feed captures confirmed temporary applicant-role additions/removals across intake, acceptance/verification, rejection, withdrawal, close/cancel/reopen, conversation deletion, class removal and external channel deletion, including equivalent buttons and forms. Shared application or membership entitlements can retain a role. A conversation transition with no membership or role effect stays silent; partial cleanup retains warnings. Officer/reviewer actions identify their completing actor, while self-service and external cleanup do not invent an officer. Role-only entries name their cause: `@reviewer updated roles for @member after application rejection. @role removed.` Self-service or automatic examples use `@member: roles updated after application close. @role removed.` Confirmed additions say `added`; different actors or causes keep separate lines.
+
+Application/ticket class creation, actual reviewer-role edits and removal record the changed binding and class. Create/change entries explain that settings apply to future conversations and existing conversations retain their saved reviewer role. A removal entry states only the reviewer binding removed from the named class. Unrelated edits, repeated settings and nonexistent removals stay silent, and a binding change does not establish every role holder's effective authority. See the [administration guide]({{ '/guides/administration/#membership-and-authority-log-upcoming' | relative_url }}). Command signatures are unchanged.
+
 ## Commands
 
 - [`/application accept`](#application-accept)

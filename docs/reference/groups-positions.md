@@ -19,6 +19,14 @@ Reports export member profiles as text attachments. The default Albion Online gu
 
 Positions belong to one selected member group. Appointments link a character to a position and its Discord role. Select the position from that group, and the character from the provided choices. Deleting a position removes its appointments. Removing an Albion Online guild or Albion Online alliance, or deleting a custom group, presents a confirmation describing the affected records; read it before proceeding.
 
+## Position logging and deleted-role cleanup (upcoming)
+
+**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+
+`/position appoint` distinguishes a new appointment (**Appointment Created**), an unchanged repeat (**Appointment Unchanged**) and an explicit suppression-clearing grant (**Appointment Reauthorized**). Only a new appointment or genuine reauthorization creates an appointment entry; a separate confirmed Discord repair can still be logged. Orphaned appointments are recorded without implying current Discord access.
+
+`/position dismiss` records the removed appointment even when a shared role remains required. `/position delete` records the position and every removed appointment, then reconciles the retired role against surviving entitlements even when no other configuration mentions it. Missing members/roles and failed calls are not successful removals. Partial failures retain warnings. Profile/group removal, kick and final expiry report committed appointment-loss counts; unregistration and grace do not claim dismissal of retained appointments. See the [administration guide]({{ '/guides/administration/#membership-and-authority-log-upcoming' | relative_url }}). Command signatures are unchanged.
+
 ## Commands
 
 - [`/alliance lookup`](#alliance-lookup)
