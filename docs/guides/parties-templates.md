@@ -27,7 +27,7 @@ Role gates are available in Production. They remain upcoming in public source re
 
 Optionally select one **Eligible role** in the button hosting setup, after Multi-signup and before Continue. This is a searchable Discord role dropdown with zero or one selection. Clearing it allows everyone. Continue opens the existing details form; Retry preserves the chosen role. The hosting commands offer the equivalent optional `role` input. Eligibility roles are Discord roles, separate from the named Tank/Healer-style slots in the form.
 
-After publication, the current host uses `/party roles add <role>` or `/party roles remove <role>` in the open party thread, including after starting. The pinned roster shows **Eligible roles: Everyone** or role mentions joined by **or**, without pinging the roles. Members need only one listed role. Removing the final requirement opens signups to everyone; templates do not save these requirements.
+After publication, the current host uses `/party roles add <role>` or `/party roles remove <role>` in the open party thread, including after starting. The pinned roster shows **Eligible roles** Everyone or role mentions joined by **or**, without pinging the roles. Members need only one listed role. Removing the final requirement opens signups to everyone; templates do not save these requirements.
 
 The gate covers named slots, Standby, signup requests and approval acceptance. Hosting alone does not qualify a participant. Explicit `/party add` assignments are exempt for the user's current signup, including subsequent moves, role losses, gate edits and host transfers. Leaving or removal ends that exemption. Accepting an ordinary signup request does not create one, and capacity limits still apply.
 
