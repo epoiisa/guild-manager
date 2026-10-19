@@ -175,6 +175,10 @@ Show one or all configured system channels.
 | --- | --- | --- | --- |
 | `system` | No | Text | System whose channel is being configured. Choices: content, account, regear, specialisation, giveaway, voice, log. |
 
+**Upcoming display refinement in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.** With no system selected, the response uses `# System Channels` followed by level 2 headings for Content, Accounts, Re-gears, Weapon Specialisation, Giveaways, Temporary Voice, and Logs. Each channel mention or `Not configured.` appears beneath its heading. Selecting one system retains the existing single-setting response.
+
+The log destination includes `Available` or `Unavailable` and any permission or visibility warning. `Available` means the channel currently exists in this Discord server, is a text or announcement channel, and Guild Manager has View Channel and Send Messages. This check sends no test message. Other destinations show their stored settings without this live inspection.
+
 ### /audit
 
 ```text

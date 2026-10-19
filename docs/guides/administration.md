@@ -11,6 +11,8 @@ Use Discord Integration overrides to grant only the commands each role needs. Op
 
 `/status` reports stored server configuration. `/channel show` lists system channels; `/manager list` lists configured Accounts, Re-gears, and Weapon Specialisation manager roles. Configuring channels and manager roles requires Discord Administrator permission.
 
+**Upcoming channel-report display in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production:** `/channel show` uses level 2 headings for Content, Accounts, Re-gears, Weapon Specialisation, Giveaways, Temporary Voice, and Logs, with each channel or `Not configured.` beneath its heading. The log destination's existing `Available` status means Guild Manager can currently find a supported channel with View Channel and Send Messages permission; it is not a test delivery. Other entries show stored settings.
+
 Each panel feature has one channel shared across applicable Albion Online servers. `/channel set` publishes or repairs its panel. Reapplying the current setting can restore a missing panel. Clearing or moving a channel ends unfinished private setup; ordinary setup expires after 15 minutes. Existing requests, giveaway announcements, and party threads retain their original destinations.
 
 `/channel set log` enables a concise membership and registration audit feed. Review channel visibility before configuring it. The feed omits conversations, answers, and proof, and failed delivery does not reverse a successful action.
