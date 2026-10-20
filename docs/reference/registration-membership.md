@@ -23,7 +23,7 @@ Self-registration can be blocked when officer recovery is required. An already-o
 
 ## Membership and preference logging (upcoming)
 
-**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+**Deployed to Production (20 October 2026); automated checks verified. Manual Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 The optional Log feed records changed `/member main set` selections with old/new Albion Online character identities and changed `/member nickname set|reset` preferences separately from confirmed Discord nickname updates. Repeated values stay silent unless a real Discord repair succeeds; a saved preference remains successful when Discord rejects its application.
 

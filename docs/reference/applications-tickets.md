@@ -43,7 +43,7 @@ Create and edit reject `@everyone` as an applicant role and reject using a role 
 
 ## Role and reviewer logging (upcoming)
 
-**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+**Deployed to Production (20 October 2026); automated checks verified. Manual Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 The optional Log feed captures confirmed temporary applicant-role additions/removals across intake, acceptance/verification, rejection, withdrawal, close/cancel/reopen, conversation deletion, class removal and external channel deletion, including equivalent buttons and forms. Shared application or membership entitlements can retain a role. A conversation transition with no membership or role effect stays silent; partial cleanup retains warnings. Officer/reviewer actions identify their completing actor, while self-service and external cleanup do not invent an officer. Role-only entries name their cause: `@reviewer updated roles for @member after application rejection. @role removed.` Self-service or automatic examples use `@member: roles updated after application close. @role removed.` Confirmed additions say `added`; different actors or causes keep separate lines.
 

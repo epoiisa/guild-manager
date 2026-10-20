@@ -21,7 +21,7 @@ Positions belong to one selected member group. Appointments link a character to 
 
 ## Position logging and deleted-role cleanup (upcoming)
 
-**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+**Deployed to Production (20 October 2026); automated checks verified. Manual Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 `/position appoint` distinguishes a new appointment (**Appointment Created**), an unchanged repeat (**Appointment Unchanged**) and an explicit suppression-clearing grant (**Appointment Reauthorized**). Only a new appointment or genuine reauthorization creates an appointment entry; a separate confirmed Discord repair can still be logged. Orphaned appointments are recorded without implying current Discord access.
 

@@ -43,7 +43,7 @@ Continue with [running the bot]({{ '/self-hosting/running/' | relative_url }}).
 
 ## Private signup-image storage (upcoming)
 
-**Upcoming in public source releases; absent from 0.1.0-alpha.1. Production availability has not been verified for template images.**
+**Deployed to Production (20 October 2026); automated checks verified. Manual Discord acceptance and memory checks during image decoding in the running bot remain pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 For reusable template graphics, create your own private Cloudflare R2 Standard bucket and bucket-scoped Object Read & Write credentials. Manual party uploads and edits remain Discord-only and work without R2. Use separate buckets/credentials for testing and live use. Keep public access, custom domains and object-age deletion rules off. Supply credentials through your secret store; never use another operator's storage.
 

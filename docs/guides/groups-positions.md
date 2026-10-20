@@ -30,7 +30,7 @@ If the stored entitlement is correct but the actual Discord role is missing, che
 
 ## Position change history (upcoming)
 
-**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+**Deployed to Production (20 October 2026); automated checks verified. Manual Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 With a Log channel configured, appointments and dismissals identify the officer, Albion Online character and server, position, group and current Discord owner when present. New appointments, unchanged repeats and explicit reauthorization are distinct. Repeating `/position appoint` can deliberately clear saved authority-role suppression; ordinary recovery does not restore revoked authority.
 

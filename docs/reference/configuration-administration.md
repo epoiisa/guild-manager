@@ -29,7 +29,7 @@ Slash commands default to disabled for ordinary members. Administrators control 
 
 The optional `buttons` switch on `/message post`, `/message compose`, `/message v2`, and `/message forum` defaults to `false`. Omitted or false keeps immediate posting after the normal inputs; only `buttons:true` opens a private draft with **Edit Message**, **Add Application**, **Add Ticket**, **Edit Buttons**, **Post**, and **Cancel**. Forums are created only on Post, with their complete starter message. Anyone with current `/message` access may configure both button types; separate `/applications` or `/tickets` grants are not required. Draft actions recheck `/message` access in the channel where the workflow began.
 
-**Upcoming display refinement, prepared locally; not yet verified in Production:** the draft uses `# Message Draft`, `## Destination Channel`, `## Message`, and `## Buttons (<count>)`. V2 drafts place `## Accent` directly after Destination Channel and before Message, showing the uppercase `#RRGGBB` colour in inline backticks. Message text appears in a plain-text code block, with a labelled excerpt for long text. The expiry timestamp is hidden; the 15-minute lifetime remains.
+**Display refinement deployed to Production; manual Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1:** the draft uses `# Message Draft`, `## Destination Channel`, `## Message`, and `## Buttons (<count>)`. V2 drafts place `## Accent` directly after Destination Channel and before Message, showing the uppercase `#RRGGBB` colour in inline backticks. Message text appears in a plain-text code block, with a labelled excerpt for long text. The expiry timestamp is hidden; the 15-minute lifetime remains.
 
 The draft retains text, media, forum title, and V2 colour. Labels contain 1–80 characters and styles are Primary, Secondary, Success, or Danger. You can reorder/remove buttons or post after removing them all, provided text or media remains. Selecting the same class again opens its existing draft entry. Disabled classes remain disabled. Editing message text retains its current file unless a replacement is uploaded. Private previews are silent and do not open intake.
 
@@ -45,7 +45,7 @@ See the UTC input rules in the [command index]({{ '/reference/' | relative_url }
 
 ## Membership and authority logging (upcoming)
 
-**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+**Deployed to Production (20 October 2026); automated checks verified. Manual Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 The `log` destination adds committed position and authority changes, changed main/nickname preferences, confirmed temporary applicant-role consequences, detailed restoration/expiry and kick-cleanup outcomes. `/manager add|remove` logs only actual binding changes, including Re-gears even when its private command receipt is silent. Repeated additions and nonexistent removals stay silent. A binding change does not prove every holder gained or lost effective authority.
 
@@ -177,7 +177,7 @@ Show one or all configured system channels.
 | --- | --- | --- | --- |
 | `system` | No | Text | System whose channel is being configured. Choices: content, account, regear, specialisation, giveaway, voice, log. |
 
-**Upcoming display refinement in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.** With no system selected, the response uses `# System Channels` followed by level 2 headings for Content, Accounts, Re-gears, Weapon Specialisation, Giveaways, Temporary Voice, and Logs. Each channel mention or `Not configured.` appears beneath its heading. Selecting one system retains the existing single-setting response.
+**Display refinement deployed to Production (20 October 2026); automated checks verified, manual Discord acceptance pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.** With no system selected, the response uses `# System Channels` followed by level 2 headings for Content, Accounts, Re-gears, Weapon Specialisation, Giveaways, Temporary Voice, and Logs. Each channel mention or `Not configured.` appears beneath its heading. Selecting one system retains the existing single-setting response.
 
 The log destination includes `Available` or `Unavailable` and any permission or visibility warning. `Available` means the channel currently exists in this Discord server, is a text or announcement channel, and Guild Manager has View Channel and Send Messages. This check sends no test message. Other destinations show their stored settings without this live inspection.
 

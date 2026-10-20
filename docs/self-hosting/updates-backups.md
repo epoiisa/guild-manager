@@ -49,7 +49,7 @@ If an update fails, stop the new process first. Recover using a compatible relea
 
 ## Paired image backups (upcoming)
 
-**Upcoming in public source releases; absent from 0.1.0-alpha.1. Production availability has not been verified for template images.**
+**Deployed to Production (20 October 2026); automated checks verified. Manual Discord acceptance and memory checks during image decoding in the running bot remain pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 Once templates reference R2 images, a database-only export is incomplete. This pair covers template assets and their lifecycle state; ordinary Discord party attachments are excluded. `node dist/ops/images.js backup /absolute/protected/new-directory` creates a consistent custom database archive, image manifest and independent hash-verified media copies. Configure operator database/R2 access and PostgreSQL 18 tools (`POSTGRES_BIN` if needed). The destination must be outside the project and Git repositories, protected from runtime deletion. `node dist/ops/images.js verify /absolute/protected/directory` verifies the pair.
 

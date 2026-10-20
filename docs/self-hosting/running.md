@@ -53,6 +53,6 @@ Loss of the runtime-lock connection triggers shutdown so the process does not co
 
 ## Image lifecycle checks (upcoming)
 
-**Upcoming in public source releases; absent from 0.1.0-alpha.1. Production availability has not been verified for template images.**
+**Deployed to Production (20 October 2026); automated checks verified. Manual Discord acceptance and memory checks during image decoding in the running bot remain pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 Configure and verify the exact private bucket before enabling template-image saves and reads. Template-object cleanup runs under the active runtime's maintenance lifecycle. No mutating media task runs in pre-deploy. Inspect storage warnings and use `node dist/ops/images.js inventory` for template quota, upload, deletion and backup metadata. Ordinary party attachments are excluded; no historical-party image migration or archive cleanup is required. A logical reset can finish while remote template-object deletion remains pending; retries must preserve other servers and new storage generations. Restart ends private drafts, while saved template images remain in R2 and independent party attachments remain in Discord. R2 restore does not repair party images.

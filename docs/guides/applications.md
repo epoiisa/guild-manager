@@ -56,7 +56,7 @@ Use the current card's controls, or the `/application` lifecycle commands. Insid
 
 ## Application role history (upcoming)
 
-**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+**Deployed to Production (20 October 2026); automated checks verified. Manual Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 The optional Log feed records confirmed temporary applicant-role changes from intake, acceptance/verification, rejection, withdrawal, close/cancel/reopen, deletion, class removal and external channel deletion. Commands, buttons and forms share the same behavior. Another active application or membership entitlement can retain the role; no removal is claimed in that case. Transitions with no membership or role consequence stay silent, and incomplete cleanup keeps its warning.
 

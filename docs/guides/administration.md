@@ -11,7 +11,7 @@ Use Discord Integration overrides to grant only the commands each role needs. Op
 
 `/status` reports stored server configuration. `/channel show` lists system channels; `/manager list` lists configured Accounts, Re-gears, and Weapon Specialisation manager roles. Configuring channels and manager roles requires Discord Administrator permission.
 
-**Upcoming channel-report display in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production:** `/channel show` uses level 2 headings for Content, Accounts, Re-gears, Weapon Specialisation, Giveaways, Temporary Voice, and Logs, with each channel or `Not configured.` beneath its heading. The log destination's existing `Available` status means Guild Manager can currently find a supported channel with View Channel and Send Messages permission; it is not a test delivery. Other entries show stored settings.
+**Channel-report display deployed to Production (20 October 2026); automated checks verified, manual Discord acceptance pending. Upcoming in public source releases; absent from 0.1.0-alpha.1:** `/channel show` uses level 2 headings for Content, Accounts, Re-gears, Weapon Specialisation, Giveaways, Temporary Voice, and Logs, with each channel or `Not configured.` beneath its heading. The log destination's existing `Available` status means Guild Manager can currently find a supported channel with View Channel and Send Messages permission; it is not a test delivery. Other entries show stored settings.
 
 Each panel feature has one channel shared across applicable Albion Online servers. `/channel set` publishes or repairs its panel. Reapplying the current setting can restore a missing panel. Clearing or moving a channel ends unfinished private setup; ordinary setup expires after 15 minutes. Existing requests, giveaway announcements, and party threads retain their original destinations.
 
@@ -19,7 +19,7 @@ Each panel feature has one channel shared across applicable Albion Online server
 
 ## Membership and authority log (upcoming)
 
-**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+**Deployed to Production (20 October 2026); automated checks verified. Manual Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 The optional Log feed adds committed position appointments, dismissals and deletion; main-character and nickname-preference changes; manager bindings; reviewer-role settings; and confirmed temporary application-role changes. It identifies the completing officer for officer actions. Self-service actions identify the affected member, and automatic cleanup has no invented actor. Mentions never notify.
 
@@ -55,7 +55,7 @@ The `/message` commands provide posting, composing, forum posts, reposting, edit
 
 For an ordinary message, choose `/message post` or `/message compose` with `buttons:true`. Use `/message v2` for a coloured container with an optional image, or `/message forum` for a forum title and body. All four keep their existing immediate behavior when `buttons` is omitted or false. With true, compose, V2, and forum collect their usual form first; its submission opens the private draft. No public message or forum thread exists until **Post**.
 
-**Upcoming display refinement, prepared locally; not yet verified in Production:** the draft uses a level-one **Message Draft** heading and level-two **Destination Channel**, **Message**, and **Buttons (count)** headings. V2 drafts add a level-two **Accent** heading directly after **Destination Channel** and before **Message**, with the uppercase `#RRGGBB` colour in inline backticks. Message text appears in a plain-text code block. The expiry timestamp is hidden; drafts still expire after 15 minutes.
+**Display refinement deployed to Production; manual Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1:** the draft uses a level-one **Message Draft** heading and level-two **Destination Channel**, **Message**, and **Buttons (count)** headings. V2 drafts add a level-two **Accent** heading directly after **Destination Channel** and before **Message**, with the uppercase `#RRGGBB` colour in inline backticks. Message text appears in a plain-text code block. The expiry timestamp is hidden; drafts still expire after 15 minutes.
 
 1. Review the destination, text preview or labelled excerpt, media filename, and any forum title or V2 colour.
 2. Choose **Add Application** or **Add Ticket**, select a class, and set its label and style in **Configure Button**. Labels contain 1–80 characters; styles are Primary, Secondary, Success, and Danger. Disabled classes remain disabled.

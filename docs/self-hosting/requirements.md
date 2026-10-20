@@ -37,6 +37,6 @@ Continue with [Discord application setup]({{ '/self-hosting/discord-setup/' | re
 
 ## Image storage requirements (upcoming)
 
-**Upcoming in public source releases; absent from 0.1.0-alpha.1. Production availability has not been verified for template images.**
+**Deployed to Production (20 October 2026); automated checks verified. Manual Discord acceptance and memory checks during image decoding in the running bot remain pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 Reusable template images require your own private R2 Standard bucket, a scoped credential, outbound HTTPS to R2, and protected independent template-image backup storage. No persistent worker disk or HTTP image server is needed. The package adds `sharp` (including its platform-specific libvips dependency) and the AWS SDK S3 client; install from the matching Node.js 22 lockfile on the target platform. Validate memory with representative graphics. Text-only templates and manual Discord party-image uploads/edits remain available without R2 configuration. Hosting from a saved template image uploads an independent Discord copy; parties have no R2 references.

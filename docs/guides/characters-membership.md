@@ -34,7 +34,7 @@ See [administration]({{ '/guides/administration/' | relative_url }}) for `/kick`
 
 ## Membership change history (upcoming)
 
-**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+**Deployed to Production (20 October 2026); automated checks verified. Manual Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 The optional Log feed distinguishes restored registration, restored retained membership and freshly verified membership. It identifies actual membership restoration and final expiry alongside ordinary update counts. A new Discord registration hold includes its saved duration and deadline; Albion Online membership grace has its own separately labelled deadline. Officer recovery also records grace periods first established during that recovery.
 

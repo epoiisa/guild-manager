@@ -54,6 +54,6 @@ See [applications]({{ '/guides/applications/' | relative_url }}) for membership 
 
 ## Reviewer configuration history (upcoming)
 
-**Upcoming in public source releases; absent from 0.1.0-alpha.1. Prepared locally; not yet deployed or verified in Production.**
+**Deployed to Production (20 October 2026); automated checks verified. Manual Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 With a Log channel configured, ticket-class creation, actual reviewer-role changes and removal record the actor, class and relevant roles. Repeated or unrelated edits stay silent. Entries describe configuration changes; other grants may still authorize the same people. Existing conversations retain their saved reviewer role after class editing. Ordinary ticket conversations and lifecycle activity do not become a general conversation-history feed. See the [administration guide]({{ '/guides/administration/#membership-and-authority-log-upcoming' | relative_url }}).
