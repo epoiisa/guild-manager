@@ -45,7 +45,7 @@ Continue with [running the bot]({{ '/self-hosting/running/' | relative_url }}).
 
 **Upcoming in public source releases; absent from 0.1.0-alpha.1. Production availability has not been verified for template images.**
 
-Create your own private Cloudflare R2 Standard bucket and bucket-scoped Object Read & Write credentials. Use separate buckets/credentials for testing and live use. Keep public access, custom domains and object-age deletion rules off. Supply credentials through your secret store; never use another operator's storage.
+For reusable template graphics, create your own private Cloudflare R2 Standard bucket and bucket-scoped Object Read & Write credentials. Manual party uploads and edits remain Discord-only and work without R2. Use separate buckets/credentials for testing and live use. Keep public access, custom domains and object-age deletion rules off. Supply credentials through your secret store; never use another operator's storage.
 
 | Variable | Meaning |
 |---|---|
@@ -56,6 +56,5 @@ Create your own private Cloudflare R2 Standard bucket and bucket-scoped Object R
 | `IMAGE_SERVER_LIMIT_BYTES` | Optional positive-byte override; default 536870912 (512 MiB). |
 | `IMAGE_GLOBAL_LIMIT_BYTES` | Optional total-byte override after capacity/cost review. |
 | `IMAGE_COLLECTION_ENABLED` | Defaults to `true`; set `false` for recovery until state is reconciled. |
-| `IMAGE_NORMALIZATION_ENABLED` | Defaults to `false`; enable bounded adoption after existing-image inventory/review. |
 
-The 15 MiB/image limit remains fixed. Animated PNG is rejected; static PNG and bounded GIF/WebP animation are supported. Provisional decode bounds are 20 million pixels per frame, 50 million overall and 1,000 frames; validate representative graphics and peak memory before enabling a live installation. Application limits do not cap the Cloudflare account bill.
+The 15 MiB/image limit remains fixed. Animated PNG is rejected; static PNG and bounded GIF/WebP animation are supported. Provisional decode bounds are 20 million pixels per frame, 50 million overall and 1,000 frames; validate representative graphics and peak memory before enabling a live installation. Quotas count template assets, transient template leases and cleanup state; ordinary party attachments are excluded. No historical-party image inventory or automatic migration is required. Application limits do not cap the Cloudflare account bill.
