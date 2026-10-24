@@ -51,6 +51,6 @@ For registration, missing roles, recovery, or denied actions, contact your Disco
 
 ## Registration and feature access (upcoming)
 
-**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance confirmed on 24 October 2026. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 An enabled **Registration** panel offers private search and explicit exact-character selection without slash-command access. Ask staff which onboarding route this Discord server uses. Covered member features require current registration here and any configured allowed usage role; see [member usage access]({{ '/getting-started/permissions/#member-usage-access-upcoming' | relative_url }}). The additional roles do not replace character ownership or active membership where a feature requires them.

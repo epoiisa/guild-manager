@@ -9,7 +9,7 @@ Registration connects an Albion Online character to a Discord user within this D
 
 ## Registration panel (upcoming)
 
-**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance confirmed on 24 October 2026. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 A Discord Administrator may enable a **Registration** panel with `/channel set register <channel>`. It starts disabled. Click **Register**, choose the Albion Online server, search by character name and deliberately select the exact result, even when there is only one match. Selection completes registration. Retry and Cancel stay private. This route needs current channel visibility, not `/register` command access or ordinary Send Messages permission. Timeout and kick restrictions still apply.
 

@@ -79,6 +79,6 @@ The existing `/applications button add` and `/tickets button add` commands still
 
 ## Member usage roles and Registration (upcoming)
 
-**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance confirmed on 24 October 2026. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 `/access add|remove|list` configures [member usage access]({{ '/getting-started/permissions/#member-usage-access-upcoming' | relative_url }}) independently of manager roles and Integration grants. `/status` includes usage roles and missing-role markers. The optional `register` channel enables self-registration and appears before Content in channel reports and shared panel order. Setting it warns that configured Albion Online guild/alliance membership and roles may be granted immediately; leave it unset for applications-only onboarding. Channel visibility and all existing recovery safeguards still apply.

@@ -368,6 +368,6 @@ This command has no slash-command inputs.
 
 ## Member access (upcoming)
 
-**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance confirmed on 24 October 2026. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 New hosting and signup actions require registration here and any configured `content` usage role. Party-specific eligible roles apply in addition; removing the final party-specific role does not remove the server-level usage requirement. Host assignments and approval acceptance recheck the target’s usage access. Existing-host management, leaving and cancellation retain their existing rules. See [member usage access]({{ '/getting-started/permissions/#member-usage-access-upcoming' | relative_url }}) for shared rules. Usage-role changes alone do not retrospectively delete existing participation or submitted records.

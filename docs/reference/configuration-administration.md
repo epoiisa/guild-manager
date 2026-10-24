@@ -53,7 +53,7 @@ The `log` destination adds committed position and authority changes, changed mai
 
 ## Allowed usage roles and Registration (upcoming)
 
-**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance confirmed on 24 October 2026. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 See [member usage access]({{ '/getting-started/permissions/#member-usage-access-upcoming' | relative_url }}) for covered actions, OR matching, registration, exceptions and current-policy checks. `/status` includes each system’s allowed usage roles and the optional Registration channel. Missing roles retain labelled IDs.
 

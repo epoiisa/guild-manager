@@ -27,7 +27,7 @@ Each topic lists exact registered command signatures, input names, accepted choi
 
 The release contains **51 top-level commands and 177 executable command actions**, including `/activate`. An active Discord server receives the 50 active command families; activation-only registration contains `/activate`.
 
-The upcoming `/access add|remove|list` command family and the `register` choice on `/channel` are documented in [Configuration and Administration]({{ "/reference/configuration-administration/#allowed-usage-roles-and-registration-upcoming" | relative_url }}). They are absent from the released counts above. Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending.
+The upcoming `/access add|remove|list` command family and the `register` choice on `/channel` are documented in [Configuration and Administration]({{ "/reference/configuration-administration/#allowed-usage-roles-and-registration-upcoming" | relative_url }}). They are absent from the released counts above. Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance confirmed on 24 October 2026.
 
 ## Reading a signature
 

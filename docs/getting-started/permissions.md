@@ -34,7 +34,7 @@ Party approval belongs to the current host; Administrator permission alone does 
 
 ## Member usage access (upcoming)
 
-**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance confirmed on 24 October 2026. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 Content, Accounts, Re-gears, Weapon Specialisation and Giveaways require at least one current Albion Online character registration in this Discord server for covered member actions. Administrators may add allowed usage roles with `/access add <system> <role>`, remove them with `/access remove <system> <role>` and inspect them with `/access list [system]`. Systems are `content`, `account`, `regear`, `specialisation` and `giveaway`; there is no Albion Online server filter. These commands require Discord Administrator permission, including reads, and default to hidden.
 
