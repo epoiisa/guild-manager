@@ -74,3 +74,9 @@ Supported formats are PNG, JPEG, WebP and GIF, up to 15 MiB subject to Discord d
 R2 stores template graphics only. Hosting with a template image reads its verified bytes under a temporary lease and uploads an independent Discord attachment; the party keeps no R2 reference. Manual party uploads and `/party edit [image]` replacements work without R2 and stay entirely in Discord. Party graphics stay on the thread details card, and ordinary joins, roster updates and lifecycle controls preserve their Discord attachments. R2 does not restore missing party graphics. Historical parties require no automatic image migration or archive cleanup. See [image storage and recovery]({{ '/self-hosting/updates-backups/#paired-image-backups-upcoming' | relative_url }}) for operator requirements.
 
 An uncertain-save warning means the result could not be confirmed. Check `/template list` and `/template show`, or the existing party, before retrying. Guild Manager retires the affected controls and does not automatically repeat publication.
+
+## Member access (upcoming)
+
+**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+
+New hosting and signup actions require registration here and any configured `content` usage role. Party-specific eligible roles apply in addition; removing the final party-specific role does not remove the server-level usage requirement. Host assignments and approval acceptance recheck the target’s usage access. Existing-host management, leaving and cancellation retain their existing rules. See [member usage access]({{ '/getting-started/permissions/#member-usage-access-upcoming' | relative_url }}) for shared rules. Usage-role changes alone do not retrospectively delete existing participation or submitted records.

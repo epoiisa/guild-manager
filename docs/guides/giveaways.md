@@ -26,3 +26,9 @@ The giveaway draws automatically at its saved time. The host can use **My Giveaw
 `/giveaway reroll` replaces one selected unavailable winner while preserving the other winners. A replacement is chosen from eligible recorded participants who have not already won; it requires an available candidate. The bot records draws and replacements.
 
 Use `/giveaways` for open giveaways. Changing the configured channel affects future announcements; existing giveaways continue in their original destination. Do not delete an announcement while expecting its scheduled draw to work normally.
+
+## Member access (upcoming)
+
+**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+
+New giveaway hosting, View All Giveaways and `/giveaways` require registration here and any configured `giveaway` usage role. Existing-host management and My Giveaways retain their existing rules. Reaction entry still requires managed membership and has no new usage-role check. See [member usage access]({{ '/getting-started/permissions/#member-usage-access-upcoming' | relative_url }}) for shared rules. Usage-role changes alone do not retrospectively delete existing participation or submitted records.

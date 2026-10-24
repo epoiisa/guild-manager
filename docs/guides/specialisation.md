@@ -31,3 +31,9 @@ Use `/specialisation add` for an audited manual addition and `/specialisation re
 `/specialisation catalogue edit` opens the enabled-name configuration; `/specialisation catalogue reset` presents the full catalogue for review before restoration. These are server configuration actions, so review the effect on available submission choices.
 
 Records follow the stable Albion Online character identity within this Discord server. `/kick` preserves them while removing user access; an officer reconnection does not restore former manager authority.
+
+## Member access (upcoming)
+
+**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+
+New weapon/tree proof and personal specialisation reports require registration here and any configured `specialisation` usage role. Submission retains exact ownership, active membership, catalogue and duplicate/tree checks. Manager review, Pending Requests and catalogue management retain their existing authority. See [member usage access]({{ '/getting-started/permissions/#member-usage-access-upcoming' | relative_url }}) for shared rules. Usage-role changes alone do not retrospectively delete existing participation or submitted records.

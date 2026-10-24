@@ -7,6 +7,16 @@ permalink: /guides/characters-membership/
 
 Registration connects an Albion Online character to a Discord user within this Discord server. Membership connects that character to a configured member group. A user is **managed** when at least one registered character has active member-group membership. Registration alone does not satisfy that requirement.
 
+## Registration panel (upcoming)
+
+**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+
+A Discord Administrator may enable a **Registration** panel with `/channel set register <channel>`. It starts disabled. Click **Register**, choose the Albion Online server, search by character name and deliberately select the exact result, even when there is only one match. Selection completes registration. Retry and Cancel stay private. This route needs current channel visibility, not `/register` command access or ordinary Send Messages permission. Timeout and kick restrictions still apply.
+
+The panel shares ordinary self-registration: the 25-character limit, unique ownership, main-character order/history, automatic verified configured Albion Online guild/alliance membership, Discord roles and nickname reconciliation. It does not independently verify character ownership, grant custom-group membership, or bypass officer recovery for kicked, held, abandoned or orphaned identities. Discord reconciliation warnings can follow a successful registration; inspect the receipt.
+
+Drafts belong to the initiating user/server and last 15 minutes. Clearing/changing the Registration channel, reset, deactivation or restart invalidates them; ordinary panel movement in the same channel does not. Clearing the panel retains completed registrations and does not disable `/register`. For applications-only onboarding, leave it unset and keep ordinary `/register` Integration access unavailable. The existing slash-command signature and single-result behaviour are unchanged.
+
 ## Register a character
 
 1. Run `/register` and choose the Albion Online server: North America, Asia, or Europe.
