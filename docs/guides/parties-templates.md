@@ -47,7 +47,7 @@ Automatic cleanup recovery for already archived threads is available in Producti
 
 After ending or cancelling a party, its host can click **Archive** on the closing message or use `/party archive` inside the thread. Archiving locks the thread and removes the party from the active list.
 
-**Archive-message cleanup is upcoming in public source releases, absent from 0.1.0-alpha.1, and not yet deployed to Production.** With this update, manual archiving and automatic expiry remove the bot's obsolete Archive messages and buttons, leaving one silent notice:
+**Archive-message cleanup is available in Production (24 October 2026). It remains upcoming in public source releases and absent from 0.1.0-alpha.1.** With this update, manual archiving and automatic expiry remove the bot's obsolete Archive messages and buttons, leaving one silent notice:
 
 > This thread has been archived and locked. Its history remains available to read, but no further messages or signups can be added.
 
