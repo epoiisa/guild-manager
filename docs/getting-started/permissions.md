@@ -32,9 +32,23 @@ Party approval belongs to the current host; Administrator permission alone does 
 
 `/channel set|clear|show` and `/manager add|remove|list` require Discord Administrator permission, including their read operations. Manager roles are specific to a system and apply across all Albion Online servers in the invoking Discord server.
 
+## Member usage access (upcoming)
+
+**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+
+Content, Accounts, Re-gears, Weapon Specialisation and Giveaways require at least one current Albion Online character registration in this Discord server for covered member actions. Administrators may add allowed usage roles with `/access add <system> <role>`, remove them with `/access remove <system> <role>` and inspect them with `/access list [system]`. Systems are `content`, `account`, `regear`, `specialisation` and `giveaway`; there is no Albion Online server filter. These commands require Discord Administrator permission, including reads, and default to hidden.
+
+An empty list adds no role restriction. Otherwise, any one currently existing configured role qualifies. Registration, channel access and each feature’s eligibility still apply; Administrator permission does not bypass member requirements. Usage roles do not assign roles or grant Integration, manager, reviewer or host authority. Deleted roles do not qualify, all-missing lists deny access, and a failed lookup asks the caller to try again without deleting settings. Role mentions in configuration reports do not notify anyone.
+
+The checks cover new party hosting and signup actions, Give/Balance/Statement, re-gear submission and personal reports, specialisation proof and personal reports, new giveaway hosting and the all-giveaways report. They run again on continuation and protected writes, including older messages. Party-specific role gates combine with Content usage access using AND. Host assignments may bypass the party-specific role list, but must still check the target’s registration and Content usage roles.
+
+Staff configuration/review, existing-host management, leaving, cancellation and withdrawing your own re-gear request retain their existing rules. Registration, application and participant ticket journeys keep their own onboarding/access checks. Giveaway reactions, reaction roles and temporary voice are outside this usage policy. No exception bypasses a kick block. Usage-role changes block covered future actions without retrospectively deleting participation, proof, balances or history; existing domain cleanup still applies.
+
+If denied, check registration in this Discord server and then the feature’s allowed roles. The role message is `You need one of this system’s allowed roles to use this feature. Allowed roles: <role names>.` An unregistered user is directed to an enabled, visible Registration channel when available, otherwise to the application process or staff. `/status` includes usage-role settings and missing-role markers.
+
 ## Buttons and forms
 
-Panel buttons do not require slash-command access, but they enforce their own rules. Channel visibility is enough to enter the Content hosting flow. Giveaway hosting additionally requires at least one registered Albion Online character. Giveaway entry requires active managed membership. Account, re-gear, and specialisation actions check their own character and role eligibility.
+Panel buttons do not require slash-command access, but they enforce their own rules. In public release **0.1.0-alpha.1**, channel visibility is enough to enter the Content hosting flow. The upcoming usage policy above adds registration and configured usage roles. Giveaway hosting additionally requires at least one registered Albion Online character. Giveaway entry requires active managed membership. Account, re-gear, and specialisation actions check their own character and role eligibility.
 
 Restrict channel visibility to the intended audience and configure Integration access separately. Hiding a slash command is not a substitute for reviewing the buttons visible in a channel.
 

@@ -9,6 +9,16 @@ Public release **0.1.0-alpha.1**. [Command index]({{ "/reference/" | relative_ur
 
 Registration links an Albion Online character to a Discord user in this Discord server. Membership records describe the character's groups. Registering a character and adding it to a custom group are separate actions.
 
+## Registration panel (upcoming)
+
+**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+
+A Discord Administrator may enable a **Registration** panel with `/channel set register <channel>`. It starts disabled. Click **Register**, choose the Albion Online server, search by character name and deliberately select the exact result, even when there is only one match. Selection completes registration. Retry and Cancel stay private. This route needs current channel visibility, not `/register` command access or ordinary Send Messages permission. Timeout and kick restrictions still apply.
+
+The panel shares ordinary self-registration: the 25-character limit, unique ownership, main-character order/history, automatic verified configured Albion Online guild/alliance membership, Discord roles and nickname reconciliation. It does not independently verify character ownership, grant custom-group membership, or bypass officer recovery for kicked, held, abandoned or orphaned identities. Discord reconciliation warnings can follow a successful registration; inspect the receipt.
+
+Drafts belong to the initiating user/server and last 15 minutes. Clearing/changing the Registration channel, reset, deactivation or restart invalidates them; ordinary panel movement in the same channel does not. Clearing the panel retains completed registrations and does not disable `/register`. For applications-only onboarding, leave it unset and keep ordinary `/register` Integration access unavailable. The existing slash-command signature and single-result behaviour are unchanged.
+
 ## Access and outcomes
 
 `/register`, `/unregister`, `/membership`, and `/roles` are member commands for the caller's own records. Give officers access to `/character`, `/member`, and `/kick` through Discord's integration permissions. Stored character and member selections come from autocomplete; choose the exact character and Albion Online server. Registration and lookup searches accept a character name or partial name and can return a selection when several matches exist.

@@ -51,6 +51,44 @@ The `log` destination adds committed position and authority changes, changed mai
 
 `/update` keeps aggregate counts and adds actual membership restorations, final expiry and newly started grace deadlines. Whole-group removal reports **members affected**, not successful Discord updates. New registration holds use their saved duration and separately labelled deadline. Successful role/nickname changes and incomplete work remain distinct from saved records. `/audit` and clean no-change updates remain silent. See the [administration guide]({{ '/guides/administration/#membership-and-authority-log-upcoming' | relative_url }}) for coverage, actor attribution and delivery limits. No slash-command signature changes are introduced.
 
+## Allowed usage roles and Registration (upcoming)
+
+**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+
+See [member usage access]({{ '/getting-started/permissions/#member-usage-access-upcoming' | relative_url }}) for covered actions, OR matching, registration, exceptions and current-policy checks. `/status` includes each system’s allowed usage roles and the optional Registration channel. Missing roles retain labelled IDs.
+
+### /access add
+
+```text
+/access add <system> <role>
+```
+
+Add an allowed usage role.
+
+`system`: Required choice of `content`, `account`, `regear`, `specialisation`, `giveaway`. Required Discord role; add is idempotent. Leave the list empty instead of adding `@everyone`. All three leaves require Discord Administrator permission at runtime, including list. Responses are private and suppress role notifications; live roles display as mentions, while missing roles retain labelled IDs.
+
+### /access remove
+
+```text
+/access remove <system> <role>
+```
+
+Remove an allowed usage role, including a deleted role.
+
+`system`: Required choice of `content`, `account`, `regear`, `specialisation`, `giveaway`. Required stored-role autocomplete; a deleted role remains removable. Removing the final role removes only the extra role restriction. All three leaves require Discord Administrator permission at runtime, including list. Responses are private and suppress role notifications; live roles display as mentions, while missing roles retain labelled IDs.
+
+### /access list
+
+```text
+/access list [system]
+```
+
+List configured usage roles.
+
+`system`: Optional choice of `content`, `account`, `regear`, `specialisation`, `giveaway`. No role input. Omit system to list all five systems; a long complete report uses `usage-roles.txt`. All three leaves require Discord Administrator permission at runtime, including list. Responses are private and suppress role notifications; live roles display as mentions, while missing roles retain labelled IDs.
+
+`register` is an additional choice on `/channel set <system> <channel>`, `/channel clear <system>` and `/channel show [system]`. It enables the optional [Registration panel]({{ "/guides/characters-membership/#registration-panel-upcoming" | relative_url }}) in a text or announcement channel. Existing servers start without one. Setting it warns that self-registration may immediately grant configured Albion Online guild/alliance membership and Discord roles, without independently proving character ownership. Clearing it invalidates unfinished registrations while retaining completed records. Unfiltered `/channel show` places Registration before Content.
+
 ## Commands
 
 - [`/activate`](#activate)
@@ -150,7 +188,7 @@ Set a system's channel.
 
 | Input | Required | Type | Meaning and accepted values |
 | --- | --- | --- | --- |
-| `system` | Yes | Text | System whose channel is being configured. Choices: content, account, regear, specialisation, giveaway, voice, log. |
+| `system` | Yes | Text | System whose channel is being configured. Choices: content, account, regear, specialisation, giveaway, voice, log; `register` is upcoming in public source releases as described above. |
 | `channel` | Yes | Discord channel | Channel to use for this system. |
 
 ### /channel clear
@@ -163,7 +201,7 @@ Clear a system's channel.
 
 | Input | Required | Type | Meaning and accepted values |
 | --- | --- | --- | --- |
-| `system` | Yes | Text | System whose channel is being configured. Choices: content, account, regear, specialisation, giveaway, voice, log. |
+| `system` | Yes | Text | System whose channel is being configured. Choices: content, account, regear, specialisation, giveaway, voice, log; `register` is upcoming in public source releases as described above. |
 
 ### /channel show
 
@@ -175,7 +213,7 @@ Show one or all configured system channels.
 
 | Input | Required | Type | Meaning and accepted values |
 | --- | --- | --- | --- |
-| `system` | No | Text | System whose channel is being configured. Choices: content, account, regear, specialisation, giveaway, voice, log. |
+| `system` | No | Text | System whose channel is being configured. Choices: content, account, regear, specialisation, giveaway, voice, log; `register` is upcoming in public source releases as described above. |
 
 **Display refinement deployed to Production (20 October 2026); automated checks verified, manual Discord acceptance pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.** With no system selected, the response uses `# System Channels` followed by level 2 headings for Content, Accounts, Re-gears, Weapon Specialisation, Giveaways, Temporary Voice, and Logs. Each channel mention or `Not configured.` appears beneath its heading. Selecting one system retains the existing single-setting response.
 

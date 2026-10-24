@@ -33,6 +33,7 @@ Use `/channel set` to select a destination for each enabled feature:
 
 | System value | Purpose |
 | --- | --- |
+| `register` (upcoming) | Optional self-registration panel; disabled until explicitly configured |
 | `content` | Party announcements and the Content hosting panel |
 | `account` | Accounts panel |
 | `regear` | Re-gears intake panel and evidence workflow |
@@ -66,3 +67,9 @@ Register a test character, verify the expected membership roles, and exercise ea
 Use `/audit` to preview membership reconciliation, then `/update` when you intend to apply it. Configure `/schedule set` only after you are satisfied with the membership setup. See [Characters and Membership]({{ '/guides/characters-membership/' | relative_url }}) for automatic departure and recovery rules.
 
 Use `/tasks` for open administrative work and `/status` for configuration. They answer different questions.
+
+## Configure member usage access (upcoming)
+
+**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+
+Use [member usage access]({{ '/getting-started/permissions/#member-usage-access-upcoming' | relative_url }}) to require any one of the allowed Discord roles for each member feature, alongside current registration and existing eligibility. Usage roles are separate from manager roles and Integration permissions. `/channel set register` enables self-registration independently of `/register` access and may immediately grant configured membership/roles. For applications-only onboarding, leave that channel unset and withhold ordinary `/register` access.

@@ -162,3 +162,9 @@ Show your Pending and Accepted re-gear requests.
 
 This command has no slash-command inputs.
 
+
+## Member access (upcoming)
+
+**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+
+New re-gear requests, member open-content selections and personal request/history reports require registration here and any configured `regear` usage role. Submissions retain exact ownership and active character membership. Manager review and administrative reports retain their existing authority; withdrawing your own request does not add this role prerequisite. See [member usage access]({{ '/getting-started/permissions/#member-usage-access-upcoming' | relative_url }}) for shared rules. Usage-role changes alone do not retrospectively delete existing participation or submitted records.
