@@ -70,6 +70,6 @@ Use `/tasks` for open administrative work and `/status` for configuration. They 
 
 ## Configure member usage access (upcoming)
 
-**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance confirmed on 24 October 2026. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 Use [member usage access]({{ '/getting-started/permissions/#member-usage-access-upcoming' | relative_url }}) to require any one of the allowed Discord roles for each member feature, alongside current registration and existing eligibility. Usage roles are separate from manager roles and Integration permissions. `/channel set register` enables self-registration independently of `/register` access and may immediately grant configured membership/roles. For applications-only onboarding, leave that channel unset and withhold ordinary `/register` access.

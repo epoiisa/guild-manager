@@ -95,6 +95,6 @@ This command has no slash-command inputs.
 
 ## Member access (upcoming)
 
-**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance remains pending. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
+**Deployed to Production on 24 October 2026; automated deployment checks verified. Manual Production Discord acceptance confirmed on 24 October 2026. Upcoming in public source releases; absent from 0.1.0-alpha.1.**
 
 New giveaway hosting, View All Giveaways and `/giveaways` require registration here and any configured `giveaway` usage role. Existing-host management and My Giveaways retain their existing rules. Reaction entry still requires managed membership and has no new usage-role check. See [member usage access]({{ '/getting-started/permissions/#member-usage-access-upcoming' | relative_url }}) for shared rules. Usage-role changes alone do not retrospectively delete existing participation or submitted records.
