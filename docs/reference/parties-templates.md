@@ -223,7 +223,7 @@ This command has no slash-command inputs.
 
 The current host uses it inside the party thread after ending or cancelling the party. It locks and archives the thread. The closing message's **Archive** button performs the same action.
 
-**Archive-message cleanup is available in Production (24 October 2026). It remains upcoming in public source releases and absent from 0.1.0-alpha.1.** With this update, the command, Archive button and automatic expiry remove the bot's obsolete Archive messages and buttons and leave one ordinary message without controls or notifications:
+**Archive-message cleanup is available in Production, with manual Discord acceptance confirmed on 24 October 2026. It remains upcoming in public source releases and absent from 0.1.0-alpha.1.** With this update, the command, Archive button and automatic expiry remove the bot's obsolete Archive messages and buttons and leave one ordinary message without controls or notifications:
 
 > This thread has been archived and locked. Its history remains available to read, but no further messages or signups can be added.
 
