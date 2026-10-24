@@ -43,6 +43,16 @@ Scheduled parties retain their scheduled start and cleanup six hours after that 
 
 Automatic cleanup recovery for already archived threads is available in Production. It is also upcoming for public source releases and absent from the published **0.1.0-alpha.1** source and downloads. The correction temporarily reopens the expired thread with its lock applied, refreshes its closed-state messages, and archives it again while retaining its history.
 
+### Archive a finished party
+
+After ending or cancelling a party, its host can click **Archive** on the closing message or use `/party archive` inside the thread. Archiving locks the thread and removes the party from the active list.
+
+**Archive-message cleanup is upcoming in public source releases, absent from 0.1.0-alpha.1, and not yet deployed to Production.** With this update, manual archiving and automatic expiry remove the bot's obsolete Archive messages and buttons, leaving one silent notice:
+
+> This thread has been archived and locked. Its history remains available to read, but no further messages or signups can be added.
+
+The announcement, party details, roster and other conversation remain. The notice has no buttons and sends no notifications. An old Archive button on an already archived party, or `/party archive` in that thread, can repair its messages. If message cleanup is incomplete, retry with `/party archive`; a retry reuses an existing notice. Previously archived threads are not changed in bulk.
+
 ## Send another ping {#send-another-ping-upcoming}
 
 Manual Ping is available in Production. It remains upcoming for public source releases and is not included in the currently published **0.1.0-alpha.1** source or downloads.

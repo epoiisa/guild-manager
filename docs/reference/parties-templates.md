@@ -221,6 +221,14 @@ Archive the current content signup party.
 
 This command has no slash-command inputs.
 
+The current host uses it inside the party thread after ending or cancelling the party. It locks and archives the thread. The closing message's **Archive** button performs the same action.
+
+**Archive-message cleanup is upcoming in public source releases, absent from 0.1.0-alpha.1, and not yet deployed to Production.** With this update, the command, Archive button and automatic expiry remove the bot's obsolete Archive messages and buttons and leave one ordinary message without controls or notifications:
+
+> This thread has been archived and locked. Its history remains available to read, but no further messages or signups can be added.
+
+Other conversation and the announcement, details and roster messages remain. The command or an old Archive button also repairs an already archived party when used; there is no bulk update of archived history. If message cleanup fails, the bot still attempts to lock and archive the thread and reports incomplete cleanup. Use `/party archive` to retry; an existing notice is reused without another notification. Automatic cleanup retries incomplete work on later lifecycle checks.
+
 ### /party transfer
 
 ```text
